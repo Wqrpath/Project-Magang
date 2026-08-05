@@ -1,0 +1,34 @@
+
+--- Sesi dijalankan pada: 2026-07-29 09:44:24.274690 ---
+https://inderaja.bmkg.go.id/IMAGE/HIMA/H08_ET_Indonesia_0230.png
+Mengecek kecocokan gambar...
+Data Satelit Cocok...
+Berhasil! File disalin ke: C:\Fajar\Official_job\web_informasi\EH_latest.png
+Berhasil menyimpan: sat_image/EH_202607290230z.png
+['sat_image\\EH_202607290230z.png']
+Gambar tidak cukup untuk membuat video.
+--- Memulai Pembersihan File ( > 24 jam) ---
+Dihapus: EH_202606021100z.png
+Dihapus: EH_202606021110z.png
+Dihapus: EH_202606021120z.png
+Dihapus: EH_202606021130z.png
+Dihapus: EH_202606021140z.png
+Dihapus: EH_202606021150z.png
+Dihapus: EH_202606021200z.png
+Dihapus: EH_202606021210z.png
+Dihapus: EH_202606021220z.png
+Dihapus: EH_202606021230z.png
+Dihapus: EH_202606021240z.png
+Dihapus: EH_202606021250z.png
+Dihapus: EH_202606021300z.png
+Dihapus: EH_202606021310z.png
+Dihapus: EH_202606021320z.png
+Dihapus: EH_202606021330z.png
+Dihapus: EH_202606021340z.png
+Dihapus: EH_202606021350z.png
+Dihapus: EH_202606021400z.png
+Dihapus: EH_202606021410z.png
+Dihapus: EH_202606021420z.png
+Dihapus: EH_202606021430z.png
+Dihapus: EH_202606021440z.png
+Pembersihan selesai. Total 23 file dihapus.

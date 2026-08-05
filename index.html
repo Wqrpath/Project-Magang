@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radar Satelit & Monitoring Pelabuhan BMKG</title>
+    <link rel="icon" href="data:,">
+    
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+    <div id="map"></div>
+
+    <div id="customPanel" class="custom-layer-panel">
+        <div class="control-section">
+            <span class="control-title">Data Satelit</span>
+            <label class="radio-label"><input type="radio" name="satelitGroup" value="statis" checked> Citra Satelit (Statis)</label>
+            <label class="radio-label"><input type="radio" name="satelitGroup" value="animasi"> Satelit Animasi (Loop)</label>
+            <label class="radio-label" style="color: #dc3545;"><input type="radio" name="satelitGroup" value="nonaktif"> ❌ Deaktivasi Satelit</label>
+        </div>
+
+        <div class="control-section">
+            <span class="control-title">Data Radar</span>
+            <label class="radio-label"><input type="radio" name="radarGroup" value="statis" checked> Citra Radar (Statis)</label>
+            <label class="radio-label"><input type="radio" name="radarGroup" value="animasi"> Radar Animasi (Loop)</label>
+            <label class="radio-label" style="color: #dc3545;"><input type="radio" name="radarGroup" value="nonaktif"> ❌ Deaktivasi Radar</label>
+        </div>
+
+        <div class="control-section">
+            <span class="control-title">Overlay Tambahan</span>
+            <label class="checkbox-label"><input type="checkbox" id="chkPetir" checked> ⚡ Sambaran Petir (1 Jam)</label>
+            <label class="checkbox-label"><input type="checkbox" id="chkWilmet" checked> Batas Wilayah Kerja</label>
+            <label class="checkbox-label"><input type="checkbox" id="chkPelabuhan" checked> Titik Pelabuhan</label>
+        </div>
+
+        <div class="control-section">
+            <span class="control-title">Informasi Waktu Data</span>
+            <div id="metadataDisplay">Memuat info waktu...</div>
+            
+            <span class="control-title">Transparansi Citra</span>
+            <input id="opacitySlider" type="range" min="0" max="1" step="0.05" value="0.9">
+            <span class="opacity-label">Intensitas: <span id="opacityVal">90%</span></span>
+        </div>
+    </div>
+
+    <div id="bottomPlayer" class="bottom-player-bar">
+        <button id="playPauseBtn"><i class="fa-solid fa-play"></i></button>
+        <input id="timelineSlider" type="range" min="0" max="100" value="0" step="0.01">
+        <span id="timeLabel" class="time-text">00:00.000 / 00:00.000</span>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/satelit.js"></script>
+    <script src="js/radar.js"></script>
+    <script src="js/petir.js"></script>
+
+    <script>
+        function dapatkanWarnaWaktu(waktuDataMs, waktuSekarangMs) {
+            if (!waktuDataMs) return 'color: #dc3545; font-weight: bold;'; 
+            
+            const selisihMenit = (waktuSekarangMs - waktuDataMs) / 60000;
+
+            if (selisihMenit > 60) {
+                return 'color: #dc3545; font-weight: bold;'; // Merah jika terlambat > 1 Jam
+            } else if (selisihMenit > 30) {
+                return 'color: #ff9800; font-weight: bold;'; // Jingga jika terlambat > 30 Menit
+            } else {
+                return 'color: #000000;'; // Hitam jika aman < 30 Menit
+            }
+        }
+        
+        // FUNGSI UTAMA UNTUK SINKRONISASI MEDIAS DAN CHECK METADATA WAKTU
+        async function updateSystem() {
+            const pcTime = new Date();
+            // Rumus konversi jam PC ke milidetik WIB murni
+            const cacheBuster = pcTime.getTime() + (pcTime.getTimezoneOffset() * 60000) + 25200000;
+            
+            // Pemicu modul petir dijalankan secara independen
+            if (typeof updateLightningSystem === "function") {
+                updateLightningSystem(cacheBuster);
+            }
+            
+            // BLOK FETCH TANPA CATCH (Eror akan langsung meledak di Console F12)
+            fetch('metadata_sat.json?t=' + cacheBuster)
+                .then(res => res.json())
+                .then(data => {
+                    const satDate = new Date(data.sat_time);
+                    const formattedSatTime = satDate.toLocaleString('id-ID', { day: '2-digit', month: 'short', year: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit', timeZoneName: 'short' });
+                    const warnaSatelit = dapatkanWarnaWaktu(satDate.getTime(), cacheBuster);
+
+                    let formattedRadarTime = "Tidak ada data";
+                    let warnaRadar = 'color: #dc3545; font-weight: bold;';
+                    if (data.radar_time) {
+                        const radarDate = new Date(data.radar_time);
+                        formattedRadarTime = radarDate.toLocaleString('id-ID', { day: '2-digit', month: 'short', year: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit', timeZoneName: 'short' });
+                        warnaRadar = dapatkanWarnaWaktu(radarDate.getTime(), cacheBuster);
+                    }
+                    
+                    let formattedLightningTime = "Tidak ada data";
+                    let warnaPetir = 'color: #dc3545; font-weight: bold;';
+                    if (data.lightning_time) {
+                        const lightDate = new Date(data.lightning_time);
+                        formattedLightningTime = lightDate.toLocaleString('id-ID', { day: '2-digit', month: 'short', year: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit', timeZoneName: 'short' });
+                        warnaPetir = dapatkanWarnaWaktu(lightDate.getTime(), cacheBuster);
+
+                        if (cacheBuster - lightDate.getTime() > 3600000) {
+                            if (typeof lightningLayerGroup !== "undefined") {
+                                lightningLayerGroup.clearLayers();
+                                activeLightningMarkers = [];
+                                loadedRealtimeIds.clear();
+                            }
+                        }
+                    }
+                    
+                    document.getElementById('metadataDisplay').innerHTML = `
+                        <table style="width: 100%; border-collapse: collapse; font-size: 11px; font-family: inherit;">
+                            <tr>
+                                <td style="width: 45px; padding: 2px 0; white-space: nowrap;">🛰️ <b>Satelit</b></td>
+                                <td style="width: 10px; padding: 2px 0; text-align: center;">:</td>
+                                <td style="padding: 2px 0;"><span style="${warnaSatelit}">${formattedSatTime}</span></td>
+                            </tr>
+                            <tr>
+                                <td colspan="3" style="padding: 3px 0;"><hr style="border:0; border-top:1px dashed #0056b3; margin:0;"></td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 2px 0; white-space: nowrap;">📡 <b>Radar</b></td>
+                                <td style="padding: 2px 0; text-align: center;">:</td>
+                                <td style="padding: 2px 0;"><span style="${warnaRadar}">${formattedRadarTime}</span></td>
+                            </tr>
+                            <tr>
+                                <td colspan="3" style="padding: 3px 0;"><hr style="border:0; border-top:1px dashed #0056b3; margin:0;"></td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 2px 0; white-space: nowrap;">⚡ <b>Petir</b></td>
+                                <td style="padding: 2px 0; text-align: center;">:</td>
+                                <td style="padding: 2px 0;"><span style="${warnaPetir}">${formattedLightningTime}</span></td>
+                            </tr>
+                        </table>
+                    `;
+                })
+                .catch(err => {
+                    // Mencegah crash total, cetak info ramah ke user dan detail teknis ke F12 Console
+                    console.error("Detail masalah pembacaan berkas metadata:", err);
+                    document.getElementById('metadataDisplay').innerHTML = "⚠️ Gagal memuat metadata";
+                });
+
+            if(typeof videoOverlay !== "undefined") {
+                const vSat = videoOverlay.getElement(); if (vSat) { vSat.src = 'video_satelit.webm?t=' + cacheBuster; vSat.load(); if (document.querySelector('input[name="satelitGroup"]:checked').value === "animasi") bindVideoToTimeline(vSat); }
+                imageOverlay.setUrl('EH_latest.png?t=' + cacheBuster);
+            }
+            if(typeof radarVideoOverlay !== "undefined") {
+                const vRad = radarVideoOverlay.getElement(); if (vRad) { vRad.src = 'video_radar.webm?t=' + cacheBuster; vRad.load(); if (document.querySelector('input[name="radarGroup"]:checked').value === "animasi") bindVideoToTimeline(vRad); }
+                radarOverlay.setUrl('radar_latest.webp?t=' + cacheBuster);
+            }
+        }
+
+        // Jalankan Loop Interval 1 Menit Global
+        updateSystem();
+        setInterval(updateSystem, 60000);
+
+        // Slider Opacity Listener
+        L.DomEvent.on(document.getElementById('opacitySlider'), 'input', e => {
+            const val = e.target.value; 
+            if(typeof videoOverlay !== "undefined") { videoOverlay.setOpacity(val); imageOverlay.setOpacity(val); }
+            if(typeof radarOverlay !== "undefined") { radarOverlay.setOpacity(val); radarVideoOverlay.setOpacity(val); }
+            document.getElementById('opacityVal').innerText = Math.round(val * 100) + '%';
+        });
+    </script>
+</body>
+</html>

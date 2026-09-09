@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Radar Satelit & Monitoring Pelabuhan BMKG</title>
+    <title>Sistem Peringatan Dini Cuaca & Navigasi Nelayan — BMKG Jawa Timur</title>
     <link rel="icon" href="data:,">
     
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
@@ -14,159 +14,436 @@
 
     <div id="map"></div>
 
-    <div id="customPanel" class="custom-layer-panel">
-        <div class="control-section">
-            <span class="control-title">Data Satelit</span>
-            <label class="radio-label"><input type="radio" name="satelitGroup" value="statis" checked> Citra Satelit (Statis)</label>
-            <label class="radio-label"><input type="radio" name="satelitGroup" value="animasi"> Satelit Animasi (Loop)</label>
-            <label class="radio-label" style="color: #dc3545;"><input type="radio" name="satelitGroup" value="nonaktif"> ❌ Deaktivasi Satelit</label>
-        </div>
-
-        <div class="control-section">
-            <span class="control-title">Data Radar</span>
-            <label class="radio-label"><input type="radio" name="radarGroup" value="statis" checked> Citra Radar (Statis)</label>
-            <label class="radio-label"><input type="radio" name="radarGroup" value="animasi"> Radar Animasi (Loop)</label>
-            <label class="radio-label" style="color: #dc3545;"><input type="radio" name="radarGroup" value="nonaktif"> ❌ Deaktivasi Radar</label>
-        </div>
-
-        <div class="control-section">
-            <span class="control-title">Overlay Tambahan</span>
-            <label class="checkbox-label"><input type="checkbox" id="chkPetir" checked> ⚡ Sambaran Petir (1 Jam)</label>
-            <label class="checkbox-label"><input type="checkbox" id="chkWilmet" checked> Batas Wilayah Kerja</label>
-            <label class="checkbox-label"><input type="checkbox" id="chkPelabuhan" checked> Titik Pelabuhan</label>
-        </div>
-
-        <div class="control-section">
-            <span class="control-title">Informasi Waktu Data</span>
-            <div id="metadataDisplay">Memuat info waktu...</div>
-            
-            <span class="control-title">Transparansi Citra</span>
-            <input id="opacitySlider" type="range" min="0" max="1" step="0.05" value="0.9">
-            <span class="opacity-label">Intensitas: <span id="opacityVal">90%</span></span>
+    <!-- ===== PANEL LOGO INSTITUSI (KIRI ATAS) ===== -->
+    <div id="logoPanel" style="
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        z-index: 1001;
+        background: rgba(11, 19, 41, 0.88);
+        backdrop-filter: blur(14px);
+        -webkit-backdrop-filter: blur(14px);
+        border: 1px solid rgba(255,255,255,0.12);
+        border-radius: 12px;
+        padding: 8px 12px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+    ">
+        <img src="logo_bmkg.jpg" alt="BMKG" title="BMKG" style="height:38px; width:38px; object-fit:contain; border-radius:50%; background:white; padding:2px;">
+        <div style="width:1px; height:30px; background:rgba(255,255,255,0.15);"></div>
+        <img src="logo_pens.jpg" alt="PENS" title="Politeknik Elektronika Negeri Surabaya" style="height:38px; width:38px; object-fit:contain; border-radius:6px; background:white; padding:2px;">
+        <div style="width:1px; height:30px; background:rgba(255,255,255,0.15);"></div>
+        <img src="logo_telkom.jpg" alt="Universitas Telkom" title="Universitas Telkom" style="height:38px; width:60px; object-fit:contain; border-radius:6px; background:white; padding:2px;">
+        <div style="width:1px; height:30px; background:rgba(255,255,255,0.15);"></div>
+        <div style="line-height:1.25;">
+            <div style="font-size:9px; font-weight:900; letter-spacing:0.8px; color:#00e5ff; text-transform:uppercase;">BMKG Jawa Timur</div>
+            <div style="font-size:10px; font-weight:700; color:#f0f6fc;">Sistem Peringatan Dini</div>
+            <div style="font-size:9px; color:#8b949e;">Cuaca &amp; Navigasi Nelayan</div>
         </div>
     </div>
 
+
+    <!-- ===== CONTAINER SIDEBAR KIRI (STATUS PERAIRAN SATELIT) ===== -->
+    <div class="left-sidebar-panel" style="top: 75px;">
+
+        <!-- PANEL: STATUS PERAIRAN ANALISIS SATELIT -->
+        <div id="satPerairanPanel" class="left-panel-card">
+            <!-- Header Collapsible -->
+            <div onclick="toggleSatPerairanPanel()" style="
+                background: linear-gradient(135deg, #0d2444, #0a3060);
+                color: white;
+                padding: 9px 12px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                cursor: pointer;
+                user-select: none;
+                border-bottom: 1px solid var(--border-glass);
+            ">
+                <div style="display: flex; align-items: center; gap: 8px;">
+                    <span style="font-size: 14px;">🛰️</span>
+                    <div>
+                        <div style="font-size: 9px; font-weight: 900; letter-spacing: 1px; text-transform: uppercase; color: var(--cyan-glow);">Analisis Pixel Citra EH</div>
+                        <div style="font-size: 11px; font-weight: 700; line-height: 1.2;">Status Awan per Perairan</div>
+                    </div>
+                </div>
+                <div style="display:flex; align-items:center; gap:6px;">
+                    <div id="satPerairanBadge" style="
+                        background: #e53935; color: white; border-radius: 12px;
+                        padding: 2px 7px; font-size: 10px; font-weight: 900;
+                        display: none; align-items: center; min-width: 20px;
+                        animation: badge-pulse 1.5s ease-in-out infinite;
+                    ">0</div>
+                    <span id="satPerairanArrow" style="font-size: 11px; color: var(--cyan-glow);">▲</span>
+                </div>
+            </div>
+
+            <!-- Isi Daftar Status Perairan -->
+            <div id="satPerairanContent" style="padding: 8px; max-height: 260px; overflow-y: auto;">
+                <div style="font-size: 11px; color: var(--text-sub); text-align: center; padding: 12px;">
+                    🔄 Memuat analisis pixel satelit...
+                </div>
+            </div>
+
+            <!-- Footer: hanya info threshold -->
+            <div style="padding: 5px 12px 7px; border-top: 1px solid rgba(255,255,255,0.06);">
+                <div style="display:flex; align-items:center; justify-content:space-between;">
+                    <div style="display:flex; gap:8px; font-size:9px; color:var(--text-sub);">
+                        <span>🔴 &gt;5% = Bahaya</span>
+                        <span>🟠 &gt;20% = Waspada</span>
+                    </div>
+                    <span id="satAnalysisTime" style="font-size:9px; color:var(--text-sub);"></span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- ===== PANEL LEGENDA CITRA SATELIT EH & SUHU PUNCAK AWAN (KIRI BAWAH) ===== -->
+    <div id="satelitLegendCard" class="wrs-glass-panel satelit-legend-panel">
+        <div class="legend-title">
+            <span>🛰️ Legenda Citra Satelit EH</span>
+            <button class="legend-btn-info" onclick="openLegendModal()"><i class="fa-solid fa-circle-info"></i> Tabel Suhu</button>
+        </div>
+        <div style="font-size: 10px; color: var(--text-sub); margin-bottom: 4px;">Estimasi Suhu Puncak Awan Konvektif:</div>
+        <div class="legend-bar-container">
+            <div class="legend-bar-gradient"></div>
+            <div class="legend-bar-ticks">
+                <span>Permukaan</span>
+                <span>-31°C</span>
+                <span>-60°C</span>
+                <span>-70°C</span>
+                <span>≤ -80°C</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== MODAL TABEL INTERPRETASI SUHU PUNCAK AWAN BMKG ===== -->
+    <div id="wrsModalLegend" class="wrs-modal-overlay" onclick="closeLegendModal(event)">
+        <div class="wrs-modal-content" onclick="event.stopPropagation()">
+            <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--border-accent); padding-bottom: 10px;">
+                <div style="display: flex; align-items: center; gap: 8px;">
+                    <span style="font-size: 20px;">🛰️</span>
+                    <div>
+                        <div style="font-size: 14px; font-weight: 800; color: var(--cyan-glow);">Interpretasi Citra Satelit Himawari EH</div>
+                        <div style="font-size: 11px; color: var(--text-sub);">Panduan Estimasi Suhu Puncak Awan & Potensi Cuaca Nelayan</div>
+                    </div>
+                </div>
+                <button onclick="closeLegendModal()" style="background: transparent; border: none; color: white; font-size: 18px; cursor: pointer;">✕</button>
+            </div>
+
+            <table class="wrs-table-legend">
+                <thead>
+                    <tr>
+                        <th style="width: 25%;">Warna pada Peta</th>
+                        <th style="width: 25%;">Estimasi Suhu Puncak Awan</th>
+                        <th style="width: 50%;">Kondisi Awan & Potensi Cuaca</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <span class="wrs-color-pill" style="background: #000; color: #fff; border: 1px solid #555;">Hitam / Transparan</span>
+                        </td>
+                        <td>Hangat / Permukaan Bumi</td>
+                        <td><b>Langit Cerah / Berawan Tipis</b>. Tidak ada awan konvektif tebal.</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class="wrs-color-pill" style="background: #00b0ff; color: #000;">Biru Muda / Biru Tua</span>
+                        </td>
+                        <td>-31°C s.d. -59°C</td>
+                        <td><b>Awan Sedang - Cukup Tebal</b>. Berpotensi hujan ringan hingga sedang.</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class="wrs-color-pill" style="background: #00e676; color: #000;">Hijau</span>
+                        </td>
+                        <td>-60°C s.d. -69°C</td>
+                        <td><b>Awan Konvektif Tebal (Cb Awal)</b>. Hujan sedang hingga lebat disertai penurunan visibilitas.</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class="wrs-color-pill" style="background: #ffea00; color: #000;">Kuning - Oranye</span>
+                        </td>
+                        <td>-70°C s.d. -79°C</td>
+                        <td><b>Awan Konvektif Sangat Masif</b>. Hujan lebat, angin kencang, dan turbulensi atmosfer.</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class="wrs-color-pill" style="background: #ff1744; color: #fff;">Merah - Pink</span>
+                        </td>
+                        <td>&le; -80°C</td>
+                        <td><b>Pusat Badai / Pertumbuhan Awan Ekstrem</b>. Hujan sangat lebat, kilat/petir masif, dan potensi puting beliung/gelombang tinggi.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div style="margin-top: 15px; padding: 10px; background: rgba(0, 229, 255, 0.08); border-radius: 6px; font-size: 10px; color: var(--cyan-glow); border: 1px solid rgba(0,229,255,0.2);">
+                ℹ️ <i>Catatan: Citra Satelit Kanal Enhancenment (EH) mengukur temperatur radiasi puncak awan. Semakin dingin suhu puncak awan (ditandai warna merah/pink), semakin tinggi pertumbuhan awan Cumulonimbus dan semakin ekstrem potensi cuacanya.</i>
+            </div>
+
+            <div style="text-align: right; margin-top: 14px;">
+                <button onclick="closeLegendModal()" style="background: var(--cyan-glow); color: #000; font-weight: 700; border: none; padding: 6px 16px; border-radius: 6px; cursor: pointer;">Tutup</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== PANEL KONTROL KANAN ATAS (WRS LAYER CONTROL) ===== -->
+    <div id="customPanel" class="wrs-glass-panel custom-layer-panel">
+        <div class="control-section">
+            <span class="control-title"><i class="fa-solid fa-satellite"></i> Data Satelit</span>
+            <label class="radio-label"><input type="radio" name="satelitGroup" value="statis" checked> Citra Satelit (Statis)</label>
+            <label class="radio-label"><input type="radio" name="satelitGroup" value="animasi"> Satelit Animasi (Loop)</label>
+            <label class="radio-label" style="color: #ff5252;"><input type="radio" name="satelitGroup" value="nonaktif"> ❌ Deaktivasi Satelit</label>
+        </div>
+
+
+
+        <div class="control-section">
+            <span class="control-title"><i class="fa-solid fa-layer-group"></i> Overlay Tambahan</span>
+            <label class="checkbox-label"><input type="checkbox" id="chkPetir" checked> ⚡ Sambaran Petir (1 Jam)</label>
+            <label class="checkbox-label"><input type="checkbox" id="chkPelabuhanIkan" checked onchange="togglePelabuhanLayer()"> ⚓ Titik Pelabuhan Perikanan</label>
+            <label class="checkbox-label"><input type="checkbox" id="chkRadius60" checked onchange="toggleRadiusLayer()"> 🌊 Wilayah Kerja (Wilmetos)</label>
+        </div>
+
+        <div class="control-section">
+            <span class="control-title"><i class="fa-solid fa-clock"></i> Informasi Waktu Data</span>
+            <div id="metadataDisplay">Memuat info waktu...</div>
+            
+            <span class="control-title" style="margin-top:8px; display:block;"><i class="fa-solid fa-eye"></i> Transparansi Citra</span>
+            <input id="opacitySlider" type="range" min="0" max="1" step="0.05" value="0.9">
+            <span class="opacity-label">Intensitas: <span id="opacityVal">90%</span></span>
+        </div>
+
+        <!-- ===== SEKSI AKSI & PERINGATAN ===== -->
+        <div class="control-section">
+            <span class="control-title"><i class="fa-solid fa-bell"></i> Peringatan &amp; Aksi</span>
+
+            <!-- Mute Alarm -->
+            <button onclick="toggleMuteAlarm && toggleMuteAlarm()" id="muteAlarmBtnPanel" style="
+                width:100%; margin-bottom:6px;
+                background:rgba(255,23,68,0.1); border:1px solid rgba(255,23,68,0.3);
+                color:#ff5252; border-radius:7px; padding:6px 8px; cursor:pointer;
+                font-size:11px; font-weight:700; display:flex; align-items:center; gap:6px;
+                transition:all 0.2s;
+            " onmouseover="this.style.background='rgba(255,23,68,0.2)'" onmouseout="this.style.background='rgba(255,23,68,0.1)'">
+                <i class="fa-solid fa-volume-xmark"></i> Mute / Unmute Alarm
+            </button>
+
+            <!-- Demo Mode -->
+            <button id="btnDemoMode" onclick="aktivasiDemoMode()" style="
+                width:100%; margin-bottom:6px;
+                background:linear-gradient(135deg,rgba(123,47,247,0.2),rgba(168,85,247,0.15));
+                border:1px solid rgba(168,85,247,0.4); color:#c084fc;
+                border-radius:7px; padding:6px 8px; cursor:pointer;
+                font-size:11px; font-weight:700; display:flex; align-items:center; gap:6px;
+                transition:all 0.2s;
+            " onmouseover="this.style.background='rgba(123,47,247,0.3)'" onmouseout="this.style.background='linear-gradient(135deg,rgba(123,47,247,0.2),rgba(168,85,247,0.15))'">
+                <i class="fa-solid fa-masks-theater"></i> Mode Demo Alarm
+            </button>
+
+            <!-- Riwayat Peringatan -->
+            <button onclick="tampilkanModalRiwayat()" style="
+                width:100%;
+                background:rgba(0,229,255,0.08); border:1px solid rgba(0,229,255,0.3);
+                color:var(--cyan-glow); border-radius:7px; padding:6px 8px; cursor:pointer;
+                font-size:11px; font-weight:700; display:flex; align-items:center; gap:6px;
+                transition:all 0.2s;
+            " onmouseover="this.style.background='rgba(0,229,255,0.15)'" onmouseout="this.style.background='rgba(0,229,255,0.08)'">
+                <i class="fa-solid fa-clock-rotate-left"></i> Riwayat Peringatan
+            </button>
+        </div>
+    </div>
+
+    <!-- ===== PLAYER TIMELINE BAR DI BAWAH ===== -->
     <div id="bottomPlayer" class="bottom-player-bar">
         <button id="playPauseBtn"><i class="fa-solid fa-play"></i></button>
         <input id="timelineSlider" type="range" min="0" max="100" value="0" step="0.01">
         <span id="timeLabel" class="time-text">00:00.000 / 00:00.000</span>
     </div>
 
+    <!-- ===== MODAL RIWAYAT PERINGATAN AWAN ===== -->
+    <div id="satRiwayatModal" onclick="if(event.target===this) tutupModalRiwayat()">
+        <div class="sat-riwayat-card">
+            <!-- Header -->
+            <div style="display:flex; align-items:center; justify-content:space-between;
+                padding:14px 18px; border-bottom:1px solid rgba(0,229,255,0.2);
+                background:linear-gradient(135deg,rgba(0,229,255,0.08),rgba(0,100,150,0.1));">
+                <div style="display:flex; align-items:center; gap:10px;">
+                    <span style="font-size:22px;">📋</span>
+                    <div>
+                        <div style="font-size:14px; font-weight:800; color:var(--cyan-glow);">Riwayat Peringatan Awan</div>
+                        <div style="font-size:11px; color:var(--text-sub);">Rekaman otomatis dari analisis pixel citra satelit EH</div>
+                    </div>
+                </div>
+                <div style="display:flex; gap:6px; align-items:center;">
+                    <button onclick="downloadRiwayatJSON()" style="
+                        background:rgba(0,230,118,0.12); border:1px solid rgba(0,230,118,0.4);
+                        color:#00e676; border-radius:7px; padding:5px 10px; cursor:pointer;
+                        font-size:11px; font-weight:700;">
+                        📥 Download JSON
+                    </button>
+                    <button onclick="hapusRiwayat()" style="
+                        background:rgba(255,23,68,0.1); border:1px solid rgba(255,23,68,0.3);
+                        color:#ff1744; border-radius:7px; padding:5px 10px; cursor:pointer;
+                        font-size:11px; font-weight:700;">
+                        🗑️ Hapus
+                    </button>
+                    <button onclick="tutupModalRiwayat()" style="
+                        background:transparent; border:none; color:#888; font-size:20px;
+                        cursor:pointer; line-height:1; padding:0 4px;">&times;</button>
+                </div>
+            </div>
+            <!-- Body -->
+            <div class="sat-riwayat-body"></div>
+        </div>
+    </div>
+
+    <!-- SCRIPTS -->
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/@turf/turf@6/turf.min.js"></script>
     <script src="js/main.js"></script>
     <script src="js/satelit.js"></script>
-    <script src="js/radar.js"></script>
+    <script src="js/satelit_analysis.js"></script>
+
+    <script src="js/petir_data.js"></script>
     <script src="js/petir.js"></script>
+    <script src="js/wilmetos_data.js"></script>
+    <script src="js/metadata_sat.js"></script>
+    <script src="js/cuaca.js"></script>
+    <script src="js/arduino_web.js"></script>
 
     <script>
+        // Modal Handlers untuk Legenda Satelit
+        function openLegendModal() {
+            document.getElementById('wrsModalLegend').style.display = 'flex';
+        }
+        function closeLegendModal() {
+            document.getElementById('wrsModalLegend').style.display = 'none';
+        }
+
         function dapatkanWarnaWaktu(waktuDataMs, waktuSekarangMs) {
-            if (!waktuDataMs) return 'color: #dc3545; font-weight: bold;'; 
+            if (!waktuDataMs) return 'color: #ff5252; font-weight: bold;'; 
             
             const selisihMenit = (waktuSekarangMs - waktuDataMs) / 60000;
 
             if (selisihMenit > 60) {
-                return 'color: #dc3545; font-weight: bold;'; // Merah jika terlambat > 1 Jam
+                return 'color: #ff5252; font-weight: bold;'; 
             } else if (selisihMenit > 30) {
-                return 'color: #ff9800; font-weight: bold;'; // Jingga jika terlambat > 30 Menit
+                return 'color: #ffb300; font-weight: bold;'; 
             } else {
-                return 'color: #000000;'; // Hitam jika aman < 30 Menit
+                return 'color: #00e676; font-weight: bold;'; 
             }
         }
         
-        // FUNGSI UTAMA UNTUK SINKRONISASI MEDIAS DAN CHECK METADATA WAKTU
-        async function updateSystem() {
+        // FUNGSI UTAMA UNTUK SINKRONISASI MEDIAS DAN METADATA WAKTU (BEBAS CORS / AMAN LOKAL FILE)
+        function updateSystem() {
             const pcTime = new Date();
-            // Rumus konversi jam PC ke milidetik WIB murni
             const cacheBuster = pcTime.getTime() + (pcTime.getTimezoneOffset() * 60000) + 25200000;
             
-            // Pemicu modul petir dijalankan secara independen
             if (typeof updateLightningSystem === "function") {
                 updateLightningSystem(cacheBuster);
             }
-            
-            // BLOK FETCH TANPA CATCH (Eror akan langsung meledak di Console F12)
-            fetch('metadata_sat.json?t=' + cacheBuster)
-                .then(res => res.json())
-                .then(data => {
-                    const satDate = new Date(data.sat_time);
-                    const formattedSatTime = satDate.toLocaleString('id-ID', { day: '2-digit', month: 'short', year: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit', timeZoneName: 'short' });
-                    const warnaSatelit = dapatkanWarnaWaktu(satDate.getTime(), cacheBuster);
 
-                    let formattedRadarTime = "Tidak ada data";
-                    let warnaRadar = 'color: #dc3545; font-weight: bold;';
-                    if (data.radar_time) {
-                        const radarDate = new Date(data.radar_time);
-                        formattedRadarTime = radarDate.toLocaleString('id-ID', { day: '2-digit', month: 'short', year: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit', timeZoneName: 'short' });
-                        warnaRadar = dapatkanWarnaWaktu(radarDate.getTime(), cacheBuster);
-                    }
-                    
-                    let formattedLightningTime = "Tidak ada data";
-                    let warnaPetir = 'color: #dc3545; font-weight: bold;';
-                    if (data.lightning_time) {
-                        const lightDate = new Date(data.lightning_time);
-                        formattedLightningTime = lightDate.toLocaleString('id-ID', { day: '2-digit', month: 'short', year: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit', timeZoneName: 'short' });
-                        warnaPetir = dapatkanWarnaWaktu(lightDate.getTime(), cacheBuster);
+            // Fungsi render metadata dari object data
+            const renderMetadataView = (data) => {
+                const satDate = new Date(data.sat_time);
+                const formattedSatTime = satDate.toLocaleString('id-ID', { day: '2-digit', month: 'short', year: 'numeric', hour: '2-digit', minute: '2-digit', timeZoneName: 'short' });
+                const warnaSatelit = dapatkanWarnaWaktu(satDate.getTime(), cacheBuster);
 
-                        if (cacheBuster - lightDate.getTime() > 3600000) {
-                            if (typeof lightningLayerGroup !== "undefined") {
-                                lightningLayerGroup.clearLayers();
-                                activeLightningMarkers = [];
-                                loadedRealtimeIds.clear();
-                            }
+
+                
+                let formattedLightningTime = "Tidak ada data";
+                let warnaPetir = 'color: #ff5252; font-weight: bold;';
+                if (data.lightning_time) {
+                    const lightDate = new Date(data.lightning_time);
+                    formattedLightningTime = lightDate.toLocaleString('id-ID', { day: '2-digit', month: 'short', year: 'numeric', hour: '2-digit', minute: '2-digit', timeZoneName: 'short' });
+                    warnaPetir = dapatkanWarnaWaktu(lightDate.getTime(), cacheBuster);
+
+                    if (cacheBuster - lightDate.getTime() > 3600000) {
+                        if (typeof lightningLayerGroup !== "undefined") {
+                            lightningLayerGroup.clearLayers();
+                            activeLightningMarkers = [];
+                            loadedRealtimeIds.clear();
                         }
                     }
-                    
-                    document.getElementById('metadataDisplay').innerHTML = `
-                        <table style="width: 100%; border-collapse: collapse; font-size: 11px; font-family: inherit;">
+                }
+
+                const el = document.getElementById('metadataDisplay');
+                if (el) {
+                    el.innerHTML = `
+                        <table style="width: 100%; border-collapse: collapse; font-size: 11px;">
                             <tr>
-                                <td style="width: 45px; padding: 2px 0; white-space: nowrap;">🛰️ <b>Satelit</b></td>
+                                <td style="padding: 2px 0; white-space: nowrap; color: var(--text-sub);">🛰️ <b>Satelit</b></td>
                                 <td style="width: 10px; padding: 2px 0; text-align: center;">:</td>
                                 <td style="padding: 2px 0;"><span style="${warnaSatelit}">${formattedSatTime}</span></td>
                             </tr>
+
                             <tr>
-                                <td colspan="3" style="padding: 3px 0;"><hr style="border:0; border-top:1px dashed #0056b3; margin:0;"></td>
+                                <td colspan="3" style="padding: 3px 0;"><hr style="border:0; border-top:1px dashed rgba(0,229,255,0.2); margin:0;"></td>
                             </tr>
                             <tr>
-                                <td style="padding: 2px 0; white-space: nowrap;">📡 <b>Radar</b></td>
-                                <td style="padding: 2px 0; text-align: center;">:</td>
-                                <td style="padding: 2px 0;"><span style="${warnaRadar}">${formattedRadarTime}</span></td>
-                            </tr>
-                            <tr>
-                                <td colspan="3" style="padding: 3px 0;"><hr style="border:0; border-top:1px dashed #0056b3; margin:0;"></td>
-                            </tr>
-                            <tr>
-                                <td style="padding: 2px 0; white-space: nowrap;">⚡ <b>Petir</b></td>
+                                <td style="padding: 2px 0; white-space: nowrap; color: var(--text-sub);">⚡ <b>Petir</b></td>
                                 <td style="padding: 2px 0; text-align: center;">:</td>
                                 <td style="padding: 2px 0;"><span style="${warnaPetir}">${formattedLightningTime}</span></td>
                             </tr>
                         </table>
                     `;
+                }
+            };
+
+            // Prioritas 1: Gunakan window.METADATA_SAT_DATA yang sudah di-load via JS (Bebas CORS!)
+            if (window.METADATA_SAT_DATA) {
+                renderMetadataView(window.METADATA_SAT_DATA);
+            }
+
+            // Prioritas 2: Coba fetch jika disajikan via web server
+            fetch('metadata_sat.json?t=' + cacheBuster)
+                .then(res => res.json())
+                .then(data => {
+                    window.METADATA_SAT_DATA = data;
+                    renderMetadataView(data);
                 })
                 .catch(err => {
-                    // Mencegah crash total, cetak info ramah ke user dan detail teknis ke F12 Console
-                    console.error("Detail masalah pembacaan berkas metadata:", err);
-                    document.getElementById('metadataDisplay').innerHTML = "⚠️ Gagal memuat metadata";
+                    if (!window.METADATA_SAT_DATA) {
+                        const el = document.getElementById('metadataDisplay');
+                        if (el) el.innerHTML = "⚠️ Data waktu belum tersedia";
+                    }
                 });
 
             if(typeof videoOverlay !== "undefined") {
-                const vSat = videoOverlay.getElement(); if (vSat) { vSat.src = 'video_satelit.webm?t=' + cacheBuster; vSat.load(); if (document.querySelector('input[name="satelitGroup"]:checked').value === "animasi") bindVideoToTimeline(vSat); }
+                const vSat = videoOverlay.getElement(); 
+                if (vSat) { 
+                    vSat.src = 'video_satelit.webm?t=' + cacheBuster; 
+                    vSat.load(); 
+                    if (document.querySelector('input[name="satelitGroup"]:checked')?.value === "animasi") bindVideoToTimeline(vSat); 
+                }
                 imageOverlay.setUrl('EH_latest.png?t=' + cacheBuster);
             }
-            if(typeof radarVideoOverlay !== "undefined") {
-                const vRad = radarVideoOverlay.getElement(); if (vRad) { vRad.src = 'video_radar.webm?t=' + cacheBuster; vRad.load(); if (document.querySelector('input[name="radarGroup"]:checked').value === "animasi") bindVideoToTimeline(vRad); }
-                radarOverlay.setUrl('radar_latest.webp?t=' + cacheBuster);
-            }
+
         }
 
         // Jalankan Loop Interval 1 Menit Global
         updateSystem();
         setInterval(updateSystem, 60000);
 
+        // Disable propagation
+        const panels = ['customPanel', 'logoPanel', 'satPerairanPanel', 'satelitLegendCard', 'wrsModalLegend', 'satRiwayatModal'];
+        panels.forEach(id => {
+            const p = document.getElementById(id);
+            if (p) {
+                L.DomEvent.disableClickPropagation(p);
+                L.DomEvent.disableScrollPropagation(p);
+            }
+        });
+
         // Slider Opacity Listener
         L.DomEvent.on(document.getElementById('opacitySlider'), 'input', e => {
             const val = e.target.value; 
             if(typeof videoOverlay !== "undefined") { videoOverlay.setOpacity(val); imageOverlay.setOpacity(val); }
-            if(typeof radarOverlay !== "undefined") { radarOverlay.setOpacity(val); radarVideoOverlay.setOpacity(val); }
             document.getElementById('opacityVal').innerText = Math.round(val * 100) + '%';
         });
     </script>

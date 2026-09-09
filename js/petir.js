@@ -3,45 +3,53 @@ lightningSound.volume = 0.6;
 
 const lightningLayerGroup = L.layerGroup().addTo(map);
 const wilmetLayer = L.layerGroup().addTo(map);
-const portsLayer = L.layerGroup().addTo(map);
 
 let activeLightningMarkers = []; 
 let loadedRealtimeIds = new Set(); 
 
-// Muat Batas Wilayah Kerja
-fetch('wilmetos_jatim.json')
-    .then(r=>r.json())
-    .then(d=>L.geoJSON(d,{style:{color:"#00f2ff",weight:.8,fillOpacity:0}}).addTo(wilmetLayer));
-    
-// Muat Titik Pelabuhan
-fetch('pelabuhan_jatim.json')
-    .then(r=>r.json())
-    .then(d=>L.geoJSON(d,{
-        pointToLayer:(f,ll)=>L.circleMarker(ll,{radius:3,fillColor:"#ff0000",color:"#fff",weight:1,fillOpacity:1}),
-        onEachFeature:(f,l)=>l.bindPopup("📍 <b>"+(f.properties.NAMOBJ||"Pelabuhan")+"</b>")
-    }).addTo(portsLayer));
+// Muat Batas Wilayah Kerja dari WILMETOS_JATIM_DATA
+if (typeof WILMETOS_JATIM_DATA !== 'undefined') {
+    L.geoJSON(WILMETOS_JATIM_DATA, { style: { color: "#00f2ff", weight: 0.8, fillOpacity: 0 } }).addTo(wilmetLayer);
+} else {
+    fetch('wilmetos_jatim_full.json')
+        .then(r => r.json())
+        .then(d => L.geoJSON(d, { style: { color: "#00f2ff", weight: 0.8, fillOpacity: 0 } }).addTo(wilmetLayer))
+        .catch(() => {});
+}
 
-// Hapus fetch WorldTimeAPI di dalam file ini karena skrgWibMs dikirim langsung dari index.html
 async function updateLightningSystem(skrgWibMs) {
-    if (!document.getElementById('chkPetir').checked) return;
+    const chk = document.getElementById('chkPetir');
+    if (chk && !chk.checked) return;
 
-    // Jika parameter tidak terkirim, hitung lokal sebagai pengaman visual
     if (!skrgWibMs) {
         const pcTime = new Date();
         skrgWibMs = pcTime.getTime() + (pcTime.getTimezoneOffset() * 60000) + 25200000;
     }
 
-    // A. BACA ARRAY HISTORIS
+    // Prioritas 1: Gunakan window.PETIR_..._DATA jika tersedia (bebas CORS)
+    if (window.PETIR_HISTORIS_DATA) {
+        processLightningFeatures(window.PETIR_HISTORIS_DATA, false, skrgWibMs);
+    }
+    if (window.PETIR_REALTIME_DATA) {
+        processLightningFeatures(window.PETIR_REALTIME_DATA, true, skrgWibMs);
+    }
+
+    // Prioritas 2: Fetch dari server jika ada web server
     fetch('petir_historis.json?t=' + skrgWibMs)
         .then(r => r.json())
-        .then(dataArray => { processLightningFeatures(dataArray, false, skrgWibMs); })
-        .catch(()=>{});
+        .then(dataArray => { 
+            window.PETIR_HISTORIS_DATA = dataArray;
+            processLightningFeatures(dataArray, false, skrgWibMs); 
+        })
+        .catch(() => {});
 
-    // B. BACA ARRAY REAL-TIME
     fetch('petir_realtime.json?t=' + skrgWibMs)
         .then(r => r.json())
-        .then(dataArray => { processLightningFeatures(dataArray, true, skrgWibMs); })
-        .catch(()=>{});
+        .then(dataArray => { 
+            window.PETIR_REALTIME_DATA = dataArray;
+            processLightningFeatures(dataArray, true, skrgWibMs); 
+        })
+        .catch(() => {});
 
     applyLightningFading(skrgWibMs);
 }
@@ -70,6 +78,11 @@ function processLightningFeatures(dataArray, useAnimation, skrgWibMs) {
             if (useAnimation && isInternalArea === true) {
                 lightningSound.currentTime = 0;
                 lightningSound.play().catch(()=>{});
+                
+                // Pemicu Otomatis Suara Sirene ke Arduino
+                if (typeof sendCommandToArduino === 'function') {
+                    sendCommandToArduino('CUACA,3,0');
+                }
             }
 
             const absCurrent = Math.abs(currentAmp);
@@ -136,7 +149,6 @@ function applyLightningFading(skrgWibMs) {
 
 // Checkbox interaction
 document.getElementById('chkWilmet').addEventListener('change', e => { if(e.target.checked) map.addLayer(wilmetLayer); else map.removeLayer(wilmetLayer); });
-document.getElementById('chkPelabuhan').addEventListener('change', e => { if(e.target.checked) map.addLayer(portsLayer); else map.removeLayer(portsLayer); });
 document.getElementById('chkPetir').addEventListener('change', e => { 
     if(e.target.checked) { map.addLayer(lightningLayerGroup); updateLightningSystem(); } 
     else { map.removeLayer(lightningLayerGroup); }

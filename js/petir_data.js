@@ -1,0 +1,2 @@
+window.PETIR_REALTIME_DATA = [];
+window.PETIR_HISTORIS_DATA = [];

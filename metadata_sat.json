@@ -1,11 +1,7 @@
 {
-    "last_update": "2026-07-29T02:39:15+00:00",
-    "sat_time": "2026-07-29T02:30:00+00:00",
+    "last_update": "2026-09-09T09:59:16+00:00",
+    "sat_time": "2026-09-09T09:50:00+00:00",
     "status": "success",
-    "file_saved": "sat_image/EH_202607290230z.png",
-    "local_check_time": "2026-07-29T09:50:13.926+00:00",
-    "lightning_time": "2026-07-29T02:50:03+00:00",
-    "lightning_active_files": 666,
-    "radar_time": "2026-07-29T02:48:00+00:00",
-    "radar_file_saved": "radar_images/202607290248.webp"
+    "file_saved": "sat_image/EH_202609090950z.png",
+    "local_check_time": "2026-09-09T10:00:09.715243+00:00"
 }

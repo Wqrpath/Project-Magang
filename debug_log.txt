@@ -1,34 +1,12 @@
+frame_index:   0%|          | 0/12 [00:00<?, ?it/s, now=None]frame_index:  17%|#6        | 2/12 [00:00<00:00, 14.30it/s, now=None]frame_index:  33%|###3      | 4/12 [00:00<00:00, 16.30it/s, now=None]frame_index:  67%|######6   | 8/12 [00:00<00:00, 25.87it/s, now=None]                                                                     ['sat_image\\EH_202609090920z.png', 'sat_image\\EH_202609090940z.png', 'sat_image\\EH_202609090950z.png']
+Menggabungkan animasi dengan jeda 2 detik di akhir...
+MoviePy - Building video video_satelit.webm.
+MoviePy - Writing video video_satelit.webm
 
---- Sesi dijalankan pada: 2026-07-29 09:44:24.274690 ---
-https://inderaja.bmkg.go.id/IMAGE/HIMA/H08_ET_Indonesia_0230.png
-Mengecek kecocokan gambar...
-Data Satelit Cocok...
-Berhasil! File disalin ke: C:\Fajar\Official_job\web_informasi\EH_latest.png
-Berhasil menyimpan: sat_image/EH_202607290230z.png
-['sat_image\\EH_202607290230z.png']
-Gambar tidak cukup untuk membuat video.
---- Memulai Pembersihan File ( > 24 jam) ---
-Dihapus: EH_202606021100z.png
-Dihapus: EH_202606021110z.png
-Dihapus: EH_202606021120z.png
-Dihapus: EH_202606021130z.png
-Dihapus: EH_202606021140z.png
-Dihapus: EH_202606021150z.png
-Dihapus: EH_202606021200z.png
-Dihapus: EH_202606021210z.png
-Dihapus: EH_202606021220z.png
-Dihapus: EH_202606021230z.png
-Dihapus: EH_202606021240z.png
-Dihapus: EH_202606021250z.png
-Dihapus: EH_202606021300z.png
-Dihapus: EH_202606021310z.png
-Dihapus: EH_202606021320z.png
-Dihapus: EH_202606021330z.png
-Dihapus: EH_202606021340z.png
-Dihapus: EH_202606021350z.png
-Dihapus: EH_202606021400z.png
-Dihapus: EH_202606021410z.png
-Dihapus: EH_202606021420z.png
-Dihapus: EH_202606021430z.png
-Dihapus: EH_202606021440z.png
-Pembersihan selesai. Total 23 file dihapus.
+MoviePy - Done !
+MoviePy - video ready video_satelit.webm
+Folder temporary berhasil dibersihkan.
+Video berhasil dibuat!
+--- Membersihkan 1 file satelit terlama (total 16 > 15) ---
+Dihapus: EH_202609080900z.png
+Pembersihan selesai. Total 1 file dihapus, tersisa 15 file.

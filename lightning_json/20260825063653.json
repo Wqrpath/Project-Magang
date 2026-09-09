@@ -1,0 +1,530 @@
+{
+    "rows": 29,
+    "data": {
+        "type": "FeatureCollection",
+        "features": [
+            {
+                "type": "Feature",
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                        112.458488,
+                        2.680876
+                    ]
+                },
+                "properties": {
+                    "id": 177336735,
+                    "current": 7977,
+                    "detector_kode": "10086,10148,10149,10150,10161,10175,10176",
+                    "detector": "BTMLD,CLPLD,GTOLD,MKSLD,PRILD,SMGLD,YOGLD",
+                    "tanggal": "25-Aug-2026 13:35:09",
+                    "epoch_sec": 1787639709.698
+                }
+            },
+            {
+                "type": "Feature",
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                        112.451484,
+                        2.700029
+                    ]
+                },
+                "properties": {
+                    "id": 177336736,
+                    "current": 11458,
+                    "detector_kode": "10084,10085,10147,10148,10150,10175,10177",
+                    "detector": "CLPLD,GTOLD,LPGLD,MNILD,PLRLD,SRGLD,YOGLD",
+                    "tanggal": "25-Aug-2026 13:35:09",
+                    "epoch_sec": 1787639709.836
+                }
+            },
+            {
+                "type": "Feature",
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                        112.451999,
+                        2.711259
+                    ]
+                },
+                "properties": {
+                    "id": 177336737,
+                    "current": 7501,
+                    "detector_kode": "10086,10149,10150,10176",
+                    "detector": "MKSLD,PRILD,SMGLD,YOGLD",
+                    "tanggal": "25-Aug-2026 13:35:10",
+                    "epoch_sec": 1787639710.491
+                }
+            },
+            {
+                "type": "Feature",
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                        101.626597,
+                        3.112303
+                    ]
+                },
+                "properties": {
+                    "id": 177336739,
+                    "current": 10499,
+                    "detector_kode": "10084,10086,10146,10147,10148,10149,10152",
+                    "detector": "CLPLD,KDRLD,LPGLD,PLBLD,PRILD,SMGLD,SRGLD",
+                    "tanggal": "25-Aug-2026 13:35:15",
+                    "epoch_sec": 1787639715.568
+                }
+            },
+            {
+                "type": "Feature",
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                        101.677585,
+                        3.037365
+                    ]
+                },
+                "properties": {
+                    "id": 177336740,
+                    "current": 9780,
+                    "detector_kode": "10084,10086,10146,10147,10148,10152,10161",
+                    "detector": "BTMLD,CLPLD,KDRLD,LPGLD,PLBLD,PRILD,SRGLD",
+                    "tanggal": "25-Aug-2026 13:35:15",
+                    "epoch_sec": 1787639715.638
+                }
+            },
+            {
+                "type": "Feature",
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                        100.566802,
+                        5.575621
+                    ]
+                },
+                "properties": {
+                    "id": 177336742,
+                    "current": 13287,
+                    "detector_kode": "10084,10086,10146,10147,10148,10149,10150",
+                    "detector": "CLPLD,KDRLD,LPGLD,PRILD,SMGLD,SRGLD,YOGLD",
+                    "tanggal": "25-Aug-2026 13:35:24",
+                    "epoch_sec": 1787639724.253
+                }
+            },
+            {
+                "type": "Feature",
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                        100.527479,
+                        5.237079
+                    ]
+                },
+                "properties": {
+                    "id": 177336743,
+                    "current": 17501,
+                    "detector_kode": "10084,10086,10146,10147,10148,10149,10150",
+                    "detector": "CLPLD,KDRLD,LPGLD,PRILD,SMGLD,SRGLD,YOGLD",
+                    "tanggal": "25-Aug-2026 13:35:29",
+                    "epoch_sec": 1787639729.769
+                }
+            },
+            {
+                "type": "Feature",
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                        98.231975,
+                        10.144064
+                    ]
+                },
+                "properties": {
+                    "id": 177336744,
+                    "current": 16421,
+                    "detector_kode": "10084,10086,10147,10152,10161",
+                    "detector": "BTMLD,LPGLD,PLBLD,PRILD,SRGLD",
+                    "tanggal": "25-Aug-2026 13:35:29",
+                    "epoch_sec": 1787639729.972
+                }
+            },
+            {
+                "type": "Feature",
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                        112.552004,
+                        2.608968
+                    ]
+                },
+                "properties": {
+                    "id": 177336745,
+                    "current": 9873,
+                    "detector_kode": "10084,10146,10149,10150,10174,10175,10176",
+                    "detector": "GTOLD,KDRLD,MKSLD,SMGLD,SRGLD,TRJLD,YOGLD",
+                    "tanggal": "25-Aug-2026 13:35:31",
+                    "epoch_sec": 1787639731.556
+                }
+            },
+            {
+                "type": "Feature",
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                        106.359655,
+                        3.773565
+                    ]
+                },
+                "properties": {
+                    "id": 177336746,
+                    "current": 22047,
+                    "detector_kode": "10146,10150,10174,10175,10176,10177,10178",
+                    "detector": "GTOLD,KDILD,KDRLD,MKSLD,MNILD,TRJLD,YOGLD",
+                    "tanggal": "25-Aug-2026 13:35:39",
+                    "epoch_sec": 1787639739.461
+                }
+            },
+            {
+                "type": "Feature",
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                        110.128433,
+                        1.278971
+                    ]
+                },
+                "properties": {
+                    "id": 177336747,
+                    "current": 9259,
+                    "detector_kode": "10084,10146,10148,10149,10150,10174,10176",
+                    "detector": "CLPLD,KDRLD,MKSLD,SMGLD,SRGLD,TRJLD,YOGLD",
+                    "tanggal": "25-Aug-2026 13:35:41",
+                    "epoch_sec": 1787639741.015
+                }
+            },
+            {
+                "type": "Feature",
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                        110.131374,
+                        1.256683
+                    ]
+                },
+                "properties": {
+                    "id": 177336748,
+                    "current": 8345,
+                    "detector_kode": "10084,10146,10148,10149,10150,10174,10176",
+                    "detector": "CLPLD,KDRLD,MKSLD,SMGLD,SRGLD,TRJLD,YOGLD",
+                    "tanggal": "25-Aug-2026 13:35:41",
+                    "epoch_sec": 1787639741.267
+                }
+            },
+            {
+                "type": "Feature",
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                        137.997134,
+                        8.468636
+                    ]
+                },
+                "properties": {
+                    "id": 177336749,
+                    "current": 19785,
+                    "detector_kode": "10174,10175,10177,10178",
+                    "detector": "GTOLD,KDILD,MNILD,TRJLD",
+                    "tanggal": "25-Aug-2026 13:35:43",
+                    "epoch_sec": 1787639743.122
+                }
+            },
+            {
+                "type": "Feature",
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                        101.864803,
+                        2.807832
+                    ]
+                },
+                "properties": {
+                    "id": 177336750,
+                    "current": 7972,
+                    "detector_kode": "10084,10147,10148,10149,10152,10161",
+                    "detector": "BTMLD,CLPLD,LPGLD,PLBLD,SMGLD,SRGLD",
+                    "tanggal": "25-Aug-2026 13:35:52",
+                    "epoch_sec": 1787639752.2
+                }
+            },
+            {
+                "type": "Feature",
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                        101.052615,
+                        5.38605
+                    ]
+                },
+                "properties": {
+                    "id": 177336751,
+                    "current": 14016,
+                    "detector_kode": "10084,10086,10147,10148,10152,10161",
+                    "detector": "BTMLD,CLPLD,LPGLD,PLBLD,PRILD,SRGLD",
+                    "tanggal": "25-Aug-2026 13:35:54",
+                    "epoch_sec": 1787639754.347
+                }
+            },
+            {
+                "type": "Feature",
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                        100.642652,
+                        5.048642
+                    ]
+                },
+                "properties": {
+                    "id": 177336752,
+                    "current": 6732,
+                    "detector_kode": "10084,10147,10152,10161",
+                    "detector": "BTMLD,LPGLD,PLBLD,SRGLD",
+                    "tanggal": "25-Aug-2026 13:35:54",
+                    "epoch_sec": 1787639754.738
+                }
+            },
+            {
+                "type": "Feature",
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                        114.952411,
+                        3.10104
+                    ]
+                },
+                "properties": {
+                    "id": 177336753,
+                    "current": 9131,
+                    "detector_kode": "10149,10150,10152,10161,10176,10177,10178",
+                    "detector": "BTMLD,KDILD,MKSLD,MNILD,PLBLD,SMGLD,YOGLD",
+                    "tanggal": "25-Aug-2026 13:35:55",
+                    "epoch_sec": 1787639755.394
+                }
+            },
+            {
+                "type": "Feature",
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                        113.288318,
+                        0.481316
+                    ]
+                },
+                "properties": {
+                    "id": 177336755,
+                    "current": 7605,
+                    "detector_kode": "10150,10152,10174,10176,10179",
+                    "detector": "MKSLD,PCILD,PLBLD,TRJLD,YOGLD",
+                    "tanggal": "25-Aug-2026 13:36:03",
+                    "epoch_sec": 1787639763.009
+                }
+            },
+            {
+                "type": "Feature",
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                        96.495809,
+                        16.446314
+                    ]
+                },
+                "properties": {
+                    "id": 177336756,
+                    "current": 20359,
+                    "detector_kode": "10084,10147,10152,10161,10179",
+                    "detector": "BTMLD,LPGLD,PCILD,PLBLD,SRGLD",
+                    "tanggal": "25-Aug-2026 13:36:03",
+                    "epoch_sec": 1787639763.727
+                }
+            },
+            {
+                "type": "Feature",
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                        99.354307,
+                        7.053871
+                    ]
+                },
+                "properties": {
+                    "id": 177336757,
+                    "current": 12197,
+                    "detector_kode": "10084,10147,10152,10161",
+                    "detector": "BTMLD,LPGLD,PLBLD,SRGLD",
+                    "tanggal": "25-Aug-2026 13:36:06",
+                    "epoch_sec": 1787639766.019
+                }
+            },
+            {
+                "type": "Feature",
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                        99.323574,
+                        7.083482
+                    ]
+                },
+                "properties": {
+                    "id": 177336758,
+                    "current": 12540,
+                    "detector_kode": "10084,10147,10152,10161",
+                    "detector": "BTMLD,LPGLD,PLBLD,SRGLD",
+                    "tanggal": "25-Aug-2026 13:36:06",
+                    "epoch_sec": 1787639766.105
+                }
+            },
+            {
+                "type": "Feature",
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                        114.635087,
+                        3.424307
+                    ]
+                },
+                "properties": {
+                    "id": 177336760,
+                    "current": 8716,
+                    "detector_kode": "10150,10161,10175,10177,10178",
+                    "detector": "BTMLD,GTOLD,KDILD,MNILD,YOGLD",
+                    "tanggal": "25-Aug-2026 13:36:11",
+                    "epoch_sec": 1787639771.171
+                }
+            },
+            {
+                "type": "Feature",
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                        112.730083,
+                        2.810202
+                    ]
+                },
+                "properties": {
+                    "id": 177336762,
+                    "current": 9314,
+                    "detector_kode": "10084,10147,10149,10150,10152,10161,10176",
+                    "detector": "BTMLD,LPGLD,MKSLD,PLBLD,SMGLD,SRGLD,YOGLD",
+                    "tanggal": "25-Aug-2026 13:36:21",
+                    "epoch_sec": 1787639781.484
+                }
+            },
+            {
+                "type": "Feature",
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                        112.792145,
+                        2.646941
+                    ]
+                },
+                "properties": {
+                    "id": 177336763,
+                    "current": 7933,
+                    "detector_kode": "10084,10146,10147,10150,10161,10176,10177",
+                    "detector": "BTMLD,KDRLD,LPGLD,MKSLD,MNILD,SRGLD,YOGLD",
+                    "tanggal": "25-Aug-2026 13:36:22",
+                    "epoch_sec": 1787639782.286
+                }
+            },
+            {
+                "type": "Feature",
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                        121.940862,
+                        10.178425
+                    ]
+                },
+                "properties": {
+                    "id": 177336765,
+                    "current": 16320,
+                    "detector_kode": "10174,10175,10176,10177,10178,10179",
+                    "detector": "GTOLD,KDILD,MKSLD,MNILD,PCILD,TRJLD",
+                    "tanggal": "25-Aug-2026 13:36:23",
+                    "epoch_sec": 1787639783.878
+                }
+            },
+            {
+                "type": "Feature",
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                        97.841252,
+                        11.017856
+                    ]
+                },
+                "properties": {
+                    "id": 177336768,
+                    "current": 18654,
+                    "detector_kode": "10084,10086,10147,10152,10161",
+                    "detector": "BTMLD,LPGLD,PLBLD,PRILD,SRGLD",
+                    "tanggal": "25-Aug-2026 13:36:34",
+                    "epoch_sec": 1787639794.663
+                }
+            },
+            {
+                "type": "Feature",
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                        100.678739,
+                        5.598806
+                    ]
+                },
+                "properties": {
+                    "id": 177336769,
+                    "current": 13544,
+                    "detector_kode": "10084,10086,10146,10147,10148,10149,10152",
+                    "detector": "CLPLD,KDRLD,LPGLD,PLBLD,PRILD,SMGLD,SRGLD",
+                    "tanggal": "25-Aug-2026 13:36:34",
+                    "epoch_sec": 1787639794.875
+                }
+            },
+            {
+                "type": "Feature",
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                        112.507904,
+                        2.764973
+                    ]
+                },
+                "properties": {
+                    "id": 177336770,
+                    "current": 7744,
+                    "detector_kode": "10084,10146,10149,10150,10152,10161,10176",
+                    "detector": "BTMLD,KDRLD,MKSLD,PLBLD,SMGLD,SRGLD,YOGLD",
+                    "tanggal": "25-Aug-2026 13:36:37",
+                    "epoch_sec": 1787639797.804
+                }
+            },
+            {
+                "type": "Feature",
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [
+                        101.687274,
+                        3.169954
+                    ]
+                },
+                "properties": {
+                    "id": 169862539,
+                    "current": 13674,
+                    "detector_kode": "10084,10086,10146,10148,10149,10150,10152",
+                    "detector": "CLPLD,KDRLD,PLBLD,PRILD,SMGLD,SRGLD,YOGLD",
+                    "tanggal": "19-Jun-2030 14:27:21",
+                    "epoch_sec": 1908084441.179
+                }
+            }
+        ]
+    }
+}

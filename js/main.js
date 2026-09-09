@@ -6,7 +6,8 @@ const radarBounds = L.latLngBounds(L.latLng(-5.207765, 110.5686), L.latLng(-9.60
 const map = L.map('map', { 
     center: [-7.2, 112.7], 
     zoom: 7, 
-    minZoom: 5, 
+    minZoom: 5,
+    zoomControl: false, 
     maxBounds: videoBounds, 
     maxBoundsViscosity: 1.0 
 });
@@ -14,6 +15,9 @@ const map = L.map('map', {
 // Peta Dasar Dark Mode
 const darkGrayUrl = 'https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}';
 L.tileLayer(darkGrayUrl, { attribution: '&copy; Esri & OpenStreetMap' }).addTo(map);
+
+// Add zoom control at bottom right
+L.control.zoom({ position: 'bottomright' }).addTo(map);
 
 // Inisialisasi Variabel Share Player Kontrol Timeline
 const bottomPlayer = document.getElementById('bottomPlayer');
@@ -47,8 +51,7 @@ function bindVideoToTimeline(v) {
 
 function checkTimelineVisibility() {
     const sAnim = document.querySelector('input[name="satelitGroup"]:checked')?.value === "animasi";
-    const rAnim = document.querySelector('input[name="radarGroup"]:checked')?.value === "animasi";
-    if (!sAnim && !rAnim) {
+    if (!sAnim) {
         if(activeVideoElement) activeVideoElement.pause(); 
         bottomPlayer.style.display = 'none'; 
         activeVideoElement = null;

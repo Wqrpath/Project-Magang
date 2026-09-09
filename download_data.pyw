@@ -2,6 +2,7 @@ import requests
 import json  # Import library JSON
 import hashlib
 from datetime import datetime, timezone, timedelta
+# pyrefly: ignore [missing-import]
 from moviepy import ImageSequenceClip, ImageClip, concatenate_videoclips
 from PIL import Image
 import os
@@ -9,7 +10,6 @@ import shutil
 from pathlib import Path
 import sys
 import time
-import createmap
 
 
 log_path = os.path.join(os.path.dirname(__file__), "debug_log.txt")
@@ -110,35 +110,38 @@ def get_image_hash(image_url):
     return None
 
 
-def cleanup_old_files(folder_path, hours_limit=6):
-    now = datetime.now(timezone.utc)
-    limit_time = now - timedelta(hours=hours_limit)
+def cleanup_old_files(folder_path, max_files=15):
+    """Hapus file satelit terlama jika jumlah melebihi max_files."""
+    all_files = []
     
-    print(f"--- Memulai Pembersihan File ( > {hours_limit} jam) ---")
-    
-    deleted_count = 0
-    
-    # Ambil semua file di folder
     for f in os.listdir(folder_path):
-        # Pastikan hanya memproses file target (EH_...)
         if f.startswith('EH_') and f.endswith('.png'):
             try:
-                # Ekstrak waktu dari nama file: EH_202605131020.png
                 time_str = f[3:15]
                 file_time = datetime.strptime(time_str, '%Y%m%d%H%M')
-                file_time = file_time.replace(tzinfo=timezone.utc)
-                
-                # JIKA waktu file lebih lama (kurang dari) limit_time, HAPUS
-                if file_time < limit_time:
-                    file_path = os.path.join(folder_path, f)
-                    os.remove(file_path)
-                    print(f"Dihapus: {f}")
-                    deleted_count += 1
-                    
-            except Exception as e:
-                print(f"Gagal memproses/menghapus {f}: {e}")
-                
-    print(f"Pembersihan selesai. Total {deleted_count} file dihapus.")
+                all_files.append((file_time, os.path.join(folder_path, f), f))
+            except Exception:
+                continue
+    
+    # Urutkan dari terlama ke terbaru
+    all_files.sort(key=lambda x: x[0])
+    
+    jumlah_lebih = len(all_files) - max_files
+    if jumlah_lebih <= 0:
+        print(f"Jumlah file sat_image: {len(all_files)} (tidak perlu dibersihkan).")
+        return
+    
+    print(f"--- Membersihkan {jumlah_lebih} file satelit terlama (total {len(all_files)} > {max_files}) ---")
+    deleted_count = 0
+    for i in range(jumlah_lebih):
+        try:
+            os.remove(all_files[i][1])
+            print(f"Dihapus: {all_files[i][2]}")
+            deleted_count += 1
+        except Exception as e:
+            print(f"Gagal menghapus {all_files[i][2]}: {e}")
+    
+    print(f"Pembersihan selesai. Total {deleted_count} file dihapus, tersisa {len(all_files) - deleted_count} file.")
 
 url = "https://inderaja.bmkg.go.id/IMAGE/HIMA/H08_ET_Indonesia.png"
 folder_sat = "sat_image"
@@ -203,8 +206,7 @@ try:
                         print(image_files)
                         # fetch_lightning_data(10)
                         create_video_with_pause(image_files)
-                        createmap.runmap()
-                        cleanup_old_files('sat_image',24)
+                        cleanup_old_files('sat_image', max_files=15)
 
                         data_log = {
                             "last_update": mdate.isoformat(),
@@ -215,6 +217,13 @@ try:
                         }
                         with open(json_file, "w") as f:
                             json.dump(data_log, f, indent=4)
+
+                        try:
+                            js_path = os.path.join(Path(__file__).parent, "js", "metadata_sat.js")
+                            with open(js_path, "w", encoding="utf-8") as fjs:
+                                fjs.write("window.METADATA_SAT_DATA = " + json.dumps(data_log, indent=4) + ";")
+                        except Exception as e_js:
+                            print(f"Gagal menulis metadata_sat.js: {e_js}")
         
                     else:
                         print(f"Gagal mengunduh gambar. Status code: {img_response.status_code}")

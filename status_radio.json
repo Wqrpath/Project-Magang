@@ -1,0 +1,110 @@
+{
+  "waktu": "2026-08-25T18:54:09.266600",
+  "perintah": "CUACA,0",
+  "data": [
+    {
+      "idx": 0,
+      "nama": "PPN Brondong",
+      "kab": "Lamongan",
+      "level": 0,
+      "desc": "Tidak ada data",
+      "angin": 0
+    },
+    {
+      "idx": 1,
+      "nama": "PPN Prigi",
+      "kab": "Trenggalek",
+      "level": 0,
+      "desc": "Tidak ada data",
+      "angin": 0
+    },
+    {
+      "idx": 2,
+      "nama": "PPP Muncar",
+      "kab": "Banyuwangi",
+      "level": 0,
+      "desc": "Tidak ada data",
+      "angin": 0
+    },
+    {
+      "idx": 3,
+      "nama": "PPP Sendang Biru",
+      "kab": "Malang",
+      "level": 0,
+      "desc": "Tidak ada data",
+      "angin": 0
+    },
+    {
+      "idx": 4,
+      "nama": "Pelabuhan Gresik",
+      "kab": "Gresik",
+      "level": 0,
+      "desc": "Tidak ada data",
+      "angin": 0
+    },
+    {
+      "idx": 5,
+      "nama": "Tanjung Perak",
+      "kab": "Surabaya",
+      "level": 0,
+      "desc": "Tidak ada data",
+      "angin": 0
+    },
+    {
+      "idx": 6,
+      "nama": "Pelabuhan Kamal",
+      "kab": "Bangkalan",
+      "level": 0,
+      "desc": "Tidak ada data",
+      "angin": 0
+    },
+    {
+      "idx": 7,
+      "nama": "Pesisir Tuban",
+      "kab": "Tuban",
+      "level": 0,
+      "desc": "Tidak ada data",
+      "angin": 0
+    },
+    {
+      "idx": 8,
+      "nama": "Pesisir Pasuruan",
+      "kab": "Pasuruan",
+      "level": 0,
+      "desc": "Tidak ada data",
+      "angin": 0
+    },
+    {
+      "idx": 9,
+      "nama": "Pesisir Situbondo",
+      "kab": "Situbondo",
+      "level": 0,
+      "desc": "Tidak ada data",
+      "angin": 0
+    },
+    {
+      "idx": 10,
+      "nama": "Pesisir Probolinggo",
+      "kab": "Probolinggo",
+      "level": 0,
+      "desc": "Tidak ada data",
+      "angin": 0
+    },
+    {
+      "idx": 11,
+      "nama": "Pesisir Pamekasan",
+      "kab": "Pamekasan",
+      "level": 0,
+      "desc": "Tidak ada data",
+      "angin": 0
+    },
+    {
+      "idx": 12,
+      "nama": "Pesisir Sumenep",
+      "kab": "Sumenep",
+      "level": 0,
+      "desc": "Tidak ada data",
+      "angin": 0
+    }
+  ]
+}

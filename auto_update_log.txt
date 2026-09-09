@@ -1,0 +1,500 @@
+[2026-09-04 20:02:27]   ✓ Selesai: arduino_radio.py
+[2026-09-04 20:02:27] --- Selesai. Tidur 10 menit... ---
+
+[2026-09-04 20:12:27] --- Siklus Update Dimulai ---
+[2026-09-04 20:12:27]   ▶ Menjalankan download_data.pyw dengan C:\Users\salma\OneDrive\Documents\Kuliah\Project Magang\web_informasi\.venv\Scripts\pythonw.exe...
+[2026-09-04 20:12:53]   ✓ Selesai: download_data.pyw
+[2026-09-04 20:12:53]   ▶ Menjalankan arduino_radio.py dengan C:\Users\salma\OneDrive\Documents\Kuliah\Project Magang\web_informasi\.venv\Scripts\pythonw.exe...
+[2026-09-04 20:12:54]   ✓ Selesai: arduino_radio.py
+[2026-09-04 20:12:54] --- Selesai. Tidur 10 menit... ---
+
+[2026-09-04 20:22:54] --- Siklus Update Dimulai ---
+[2026-09-04 20:22:54]   ▶ Menjalankan download_data.pyw dengan C:\Users\salma\OneDrive\Documents\Kuliah\Project Magang\web_informasi\.venv\Scripts\pythonw.exe...
+[2026-09-04 20:23:14]   ✓ Selesai: download_data.pyw
+[2026-09-04 20:23:14]   ▶ Menjalankan arduino_radio.py dengan C:\Users\salma\OneDrive\Documents\Kuliah\Project Magang\web_informasi\.venv\Scripts\pythonw.exe...
+[2026-09-04 20:23:15]   ✓ Selesai: arduino_radio.py
+[2026-09-04 20:23:15] --- Selesai. Tidur 10 menit... ---
+
+[2026-09-04 20:33:15] --- Siklus Update Dimulai ---
+[2026-09-04 20:33:15]   ▶ Menjalankan download_data.pyw dengan C:\Users\salma\OneDrive\Documents\Kuliah\Project Magang\web_informasi\.venv\Scripts\pythonw.exe...
+[2026-09-04 20:33:40]   ✓ Selesai: download_data.pyw
+[2026-09-04 20:33:40]   ▶ Menjalankan arduino_radio.py dengan C:\Users\salma\OneDrive\Documents\Kuliah\Project Magang\web_informasi\.venv\Scripts\pythonw.exe...
+[2026-09-04 20:33:41]   ✓ Selesai: arduino_radio.py
+[2026-09-04 20:33:41] --- Selesai. Tidur 10 menit... ---
+
+[2026-09-04 20:43:41] --- Siklus Update Dimulai ---
+[2026-09-04 20:43:41]   ▶ Menjalankan download_data.pyw dengan C:\Users\salma\OneDrive\Documents\Kuliah\Project Magang\web_informasi\.venv\Scripts\pythonw.exe...
+[2026-09-04 20:44:25]   ✓ Selesai: download_data.pyw
+[2026-09-04 20:44:25]   ▶ Menjalankan arduino_radio.py dengan C:\Users\salma\OneDrive\Documents\Kuliah\Project Magang\web_informasi\.venv\Scripts\pythonw.exe...
+[2026-09-04 20:44:26]   ✓ Selesai: arduino_radio.py
+[2026-09-04 20:44:26] --- Selesai. Tidur 10 menit... ---
+
+[2026-09-04 20:54:26] --- Siklus Update Dimulai ---
+[2026-09-04 20:54:26]   ▶ Menjalankan download_data.pyw dengan C:\Users\salma\OneDrive\Documents\Kuliah\Project Magang\web_informasi\.venv\Scripts\pythonw.exe...
+[2026-09-04 20:54:48]   ✓ Selesai: download_data.pyw
+[2026-09-04 20:54:48]   ▶ Menjalankan arduino_radio.py dengan C:\Users\salma\OneDrive\Documents\Kuliah\Project Magang\web_informasi\.venv\Scripts\pythonw.exe...
+[2026-09-04 20:54:48]   ✓ Selesai: arduino_radio.py
+[2026-09-04 20:54:48] --- Selesai. Tidur 10 menit... ---
+
+[2026-09-04 21:04:48] --- Siklus Update Dimulai ---
+[2026-09-04 21:04:48]   ▶ Menjalankan download_data.pyw dengan C:\Users\salma\OneDrive\Documents\Kuliah\Project Magang\web_informasi\.venv\Scripts\pythonw.exe...
+[2026-09-04 21:05:11]   ✓ Selesai: download_data.pyw
+[2026-09-04 21:05:11]   ▶ Menjalankan arduino_radio.py dengan C:\Users\salma\OneDrive\Documents\Kuliah\Project Magang\web_informasi\.venv\Scripts\pythonw.exe...
+[2026-09-04 21:05:12]   ✓ Selesai: arduino_radio.py
+[2026-09-04 21:05:12] --- Selesai. Tidur 10 menit... ---
+
+[2026-09-04 21:15:12] --- Siklus Update Dimulai ---
+[2026-09-04 21:15:12]   ▶ Menjalankan download_data.pyw dengan C:\Users\salma\OneDrive\Documents\Kuliah\Project Magang\web_informasi\.venv\Scripts\pythonw.exe...
+[2026-09-04 21:15:33]   ✓ Selesai: download_data.pyw
+[2026-09-04 21:15:33]   ▶ Menjalankan arduino_radio.py dengan C:\Users\salma\OneDrive\Documents\Kuliah\Project Magang\web_informasi\.venv\Scripts\pythonw.exe...
+[2026-09-04 21:15:33]   ✓ Selesai: arduino_radio.py
+[2026-09-04 21:15:33] --- Selesai. Tidur 10 menit... ---
+
+[2026-09-04 21:25:33] --- Siklus Update Dimulai ---
+[2026-09-04 21:25:33]   ▶ Menjalankan download_data.pyw dengan C:\Users\salma\OneDrive\Documents\Kuliah\Project Magang\web_informasi\.venv\Scripts\pythonw.exe...
+[2026-09-04 21:25:52]   ✓ Selesai: download_data.pyw
+[2026-09-04 21:25:52]   ▶ Menjalankan arduino_radio.py dengan C:\Users\salma\OneDrive\Documents\Kuliah\Project Magang\web_informasi\.venv\Scripts\pythonw.exe...
+[2026-09-04 21:25:53]   ✓ Selesai: arduino_radio.py
+[2026-09-04 21:25:53] --- Selesai. Tidur 10 menit... ---
+
+[2026-09-04 21:35:53] --- Siklus Update Dimulai ---
+[2026-09-04 21:35:53]   ▶ Menjalankan download_data.pyw dengan C:\Users\salma\OneDrive\Documents\Kuliah\Project Magang\web_informasi\.venv\Scripts\pythonw.exe...
+[2026-09-04 21:36:19]   ✓ Selesai: download_data.pyw
+[2026-09-04 21:36:19]   ▶ Menjalankan arduino_radio.py dengan C:\Users\salma\OneDrive\Documents\Kuliah\Project Magang\web_informasi\.venv\Scripts\pythonw.exe...
+[2026-09-04 21:36:20]   ✓ Selesai: arduino_radio.py
+[2026-09-04 21:36:20] --- Selesai. Tidur 10 menit... ---
+
+[2026-09-04 21:46:20] --- Siklus Update Dimulai ---
+[2026-09-04 21:46:20]   ▶ Menjalankan download_data.pyw dengan C:\Users\salma\OneDrive\Documents\Kuliah\Project Magang\web_informasi\.venv\Scripts\pythonw.exe...
+[2026-09-04 21:46:45]   ✓ Selesai: download_data.pyw
+[2026-09-04 21:46:45]   ▶ Menjalankan arduino_radio.py dengan C:\Users\salma\OneDrive\Documents\Kuliah\Project Magang\web_informasi\.venv\Scripts\pythonw.exe...
+[2026-09-04 21:46:45]   ✓ Selesai: arduino_radio.py
+[2026-09-04 21:46:45] --- Selesai. Tidur 10 menit... ---
+
+[2026-09-04 21:56:45] --- Siklus Update Dimulai ---
+[2026-09-04 21:56:45]   ▶ Menjalankan download_data.pyw dengan C:\Users\salma\OneDrive\Documents\Kuliah\Project Magang\web_informasi\.venv\Scripts\pythonw.exe...
+[2026-09-04 21:57:10]   ✓ Selesai: download_data.pyw
+[2026-09-04 21:57:10]   ▶ Menjalankan arduino_radio.py dengan C:\Users\salma\OneDrive\Documents\Kuliah\Project Magang\web_informasi\.venv\Scripts\pythonw.exe...
+[2026-09-04 21:57:10]   ✓ Selesai: arduino_radio.py
+[2026-09-04 21:57:10] --- Selesai. Tidur 10 menit... ---
+
+[2026-09-04 22:07:10] --- Siklus Update Dimulai ---
+[2026-09-04 22:07:11]   ▶ Menjalankan download_data.pyw dengan C:\Users\salma\OneDrive\Documents\Kuliah\Project Magang\web_informasi\.venv\Scripts\pythonw.exe...
+[2026-09-04 22:07:34]   ✓ Selesai: download_data.pyw
+[2026-09-04 22:07:34]   ▶ Menjalankan arduino_radio.py dengan C:\Users\salma\OneDrive\Documents\Kuliah\Project Magang\web_informasi\.venv\Scripts\pythonw.exe...
+[2026-09-04 22:07:34]   ✓ Selesai: arduino_radio.py
+[2026-09-04 22:07:34] --- Selesai. Tidur 10 menit... ---
+
+[2026-09-04 22:17:34] --- Siklus Update Dimulai ---
+[2026-09-04 22:17:34]   ▶ Menjalankan download_data.pyw dengan C:\Users\salma\OneDrive\Documents\Kuliah\Project Magang\web_informasi\.venv\Scripts\pythonw.exe...
+[2026-09-04 22:17:58]   ✓ Selesai: download_data.pyw
+[2026-09-04 22:17:58]   ▶ Menjalankan arduino_radio.py dengan C:\Users\salma\OneDrive\Documents\Kuliah\Project Magang\web_informasi\.venv\Scripts\pythonw.exe...
+[2026-09-04 22:17:59]   ✓ Selesai: arduino_radio.py
+[2026-09-04 22:17:59] --- Selesai. Tidur 10 menit... ---
+
+[2026-09-04 22:27:59] --- Siklus Update Dimulai ---
+[2026-09-04 22:27:59]   ▶ Menjalankan download_data.pyw dengan C:\Users\salma\OneDrive\Documents\Kuliah\Project Magang\web_informasi\.venv\Scripts\pythonw.exe...
+[2026-09-04 22:28:26]   ✓ Selesai: download_data.pyw
+[2026-09-04 22:28:26]   ▶ Menjalankan arduino_radio.py dengan C:\Users\salma\OneDrive\Documents\Kuliah\Project Magang\web_informasi\.venv\Scripts\pythonw.exe...
+[2026-09-04 22:28:27]   ✓ Selesai: arduino_radio.py
+[2026-09-04 22:28:27] --- Selesai. Tidur 10 menit... ---
+
+[2026-09-04 22:38:27] --- Siklus Update Dimulai ---
+[2026-09-04 22:38:27]   ▶ Menjalankan download_data.pyw dengan C:\Users\salma\OneDrive\Documents\Kuliah\Project Magang\web_informasi\.venv\Scripts\pythonw.exe...
+[2026-09-04 22:38:52]   ✓ Selesai: download_data.pyw
+[2026-09-04 22:38:52]   ▶ Menjalankan arduino_radio.py dengan C:\Users\salma\OneDrive\Documents\Kuliah\Project Magang\web_informasi\.venv\Scripts\pythonw.exe...
+[2026-09-04 22:38:53]   ✓ Selesai: arduino_radio.py
+[2026-09-04 22:38:53] --- Selesai. Tidur 10 menit... ---
+
+[2026-09-04 22:48:53] --- Siklus Update Dimulai ---
+[2026-09-04 22:48:53]   ▶ Menjalankan download_data.pyw dengan C:\Users\salma\OneDrive\Documents\Kuliah\Project Magang\web_informasi\.venv\Scripts\pythonw.exe...
+[2026-09-04 22:49:17]   ✓ Selesai: download_data.pyw
+[2026-09-04 22:49:17]   ▶ Menjalankan arduino_radio.py dengan C:\Users\salma\OneDrive\Documents\Kuliah\Project Magang\web_informasi\.venv\Scripts\pythonw.exe...
+[2026-09-04 22:49:18]   ✓ Selesai: arduino_radio.py
+[2026-09-04 22:49:18] --- Selesai. Tidur 10 menit... ---
+
+[2026-09-04 22:59:18] --- Siklus Update Dimulai ---
+[2026-09-04 22:59:18]   ▶ Menjalankan download_data.pyw dengan C:\Users\salma\OneDrive\Documents\Kuliah\Project Magang\web_informasi\.venv\Scripts\pythonw.exe...
+[2026-09-04 22:59:44]   ✓ Selesai: download_data.pyw
+[2026-09-04 22:59:44]   ▶ Menjalankan arduino_radio.py dengan C:\Users\salma\OneDrive\Documents\Kuliah\Project Magang\web_informasi\.venv\Scripts\pythonw.exe...
+[2026-09-04 22:59:45]   ✓ Selesai: arduino_radio.py
+[2026-09-04 22:59:45] --- Selesai. Tidur 10 menit... ---
+
+[2026-09-04 23:09:45] --- Siklus Update Dimulai ---
+[2026-09-04 23:09:45]   ▶ Menjalankan download_data.pyw dengan C:\Users\salma\OneDrive\Documents\Kuliah\Project Magang\web_informasi\.venv\Scripts\pythonw.exe...
+[2026-09-04 23:10:10]   ✓ Selesai: download_data.pyw
+[2026-09-04 23:10:10]   ▶ Menjalankan arduino_radio.py dengan C:\Users\salma\OneDrive\Documents\Kuliah\Project Magang\web_informasi\.venv\Scripts\pythonw.exe...
+[2026-09-04 23:10:11]   ✓ Selesai: arduino_radio.py
+[2026-09-04 23:10:11] --- Selesai. Tidur 10 menit... ---
+
+[2026-09-04 23:20:11] --- Siklus Update Dimulai ---
+[2026-09-04 23:20:11]   ▶ Menjalankan download_data.pyw dengan C:\Users\salma\OneDrive\Documents\Kuliah\Project Magang\web_informasi\.venv\Scripts\pythonw.exe...
+[2026-09-04 23:20:37]   ✓ Selesai: download_data.pyw
+[2026-09-04 23:20:37]   ▶ Menjalankan arduino_radio.py dengan C:\Users\salma\OneDrive\Documents\Kuliah\Project Magang\web_informasi\.venv\Scripts\pythonw.exe...
+[2026-09-04 23:20:38]   ✓ Selesai: arduino_radio.py
+[2026-09-04 23:20:38] --- Selesai. Tidur 10 menit... ---
+
+[2026-09-04 23:30:38] --- Siklus Update Dimulai ---
+[2026-09-04 23:30:38]   ▶ Menjalankan download_data.pyw dengan C:\Users\salma\OneDrive\Documents\Kuliah\Project Magang\web_informasi\.venv\Scripts\pythonw.exe...
+[2026-09-04 23:31:03]   ✓ Selesai: download_data.pyw
+[2026-09-04 23:31:03]   ▶ Menjalankan arduino_radio.py dengan C:\Users\salma\OneDrive\Documents\Kuliah\Project Magang\web_informasi\.venv\Scripts\pythonw.exe...
+[2026-09-04 23:31:04]   ✓ Selesai: arduino_radio.py
+[2026-09-04 23:31:04] --- Selesai. Tidur 10 menit... ---
+
+[2026-09-04 23:41:04] --- Siklus Update Dimulai ---
+[2026-09-04 23:41:04]   ▶ Menjalankan download_data.pyw dengan C:\Users\salma\OneDrive\Documents\Kuliah\Project Magang\web_informasi\.venv\Scripts\pythonw.exe...
+[2026-09-04 23:41:24]   ✓ Selesai: download_data.pyw
+[2026-09-04 23:41:24]   ▶ Menjalankan arduino_radio.py dengan C:\Users\salma\OneDrive\Documents\Kuliah\Project Magang\web_informasi\.venv\Scripts\pythonw.exe...
+[2026-09-04 23:41:24]   ✓ Selesai: arduino_radio.py
+[2026-09-04 23:41:24] --- Selesai. Tidur 10 menit... ---
+
+[2026-09-04 23:51:24] --- Siklus Update Dimulai ---
+[2026-09-04 23:51:24]   ▶ Menjalankan download_data.pyw dengan C:\Users\salma\OneDrive\Documents\Kuliah\Project Magang\web_informasi\.venv\Scripts\pythonw.exe...
+[2026-09-04 23:51:45]   ✓ Selesai: download_data.pyw
+[2026-09-04 23:51:45]   ▶ Menjalankan arduino_radio.py dengan C:\Users\salma\OneDrive\Documents\Kuliah\Project Magang\web_informasi\.venv\Scripts\pythonw.exe...
+[2026-09-04 23:51:46]   ✓ Selesai: arduino_radio.py
+[2026-09-04 23:51:46] --- Selesai. Tidur 10 menit... ---
+
+[2026-09-05 00:01:46] --- Siklus Update Dimulai ---
+[2026-09-05 00:01:46]   ▶ Menjalankan download_data.pyw dengan C:\Users\salma\OneDrive\Documents\Kuliah\Project Magang\web_informasi\.venv\Scripts\pythonw.exe...
+[2026-09-05 00:02:10]   ✓ Selesai: download_data.pyw
+[2026-09-05 00:02:10]   ▶ Menjalankan arduino_radio.py dengan C:\Users\salma\OneDrive\Documents\Kuliah\Project Magang\web_informasi\.venv\Scripts\pythonw.exe...
+[2026-09-05 00:02:11]   ✓ Selesai: arduino_radio.py
+[2026-09-05 00:02:11] --- Selesai. Tidur 10 menit... ---
+
+[2026-09-05 00:12:11] --- Siklus Update Dimulai ---
+[2026-09-05 00:12:11]   ▶ Menjalankan download_data.pyw dengan C:\Users\salma\OneDrive\Documents\Kuliah\Project Magang\web_informasi\.venv\Scripts\pythonw.exe...
+[2026-09-05 00:12:31]   ✓ Selesai: download_data.pyw
+[2026-09-05 00:12:31]   ▶ Menjalankan arduino_radio.py dengan C:\Users\salma\OneDrive\Documents\Kuliah\Project Magang\web_informasi\.venv\Scripts\pythonw.exe...
+[2026-09-05 00:12:31]   ✓ Selesai: arduino_radio.py
+[2026-09-05 00:12:31] --- Selesai. Tidur 10 menit... ---
+
+[2026-09-05 00:22:31] --- Siklus Update Dimulai ---
+[2026-09-05 00:22:31]   ▶ Menjalankan download_data.pyw dengan C:\Users\salma\OneDrive\Documents\Kuliah\Project Magang\web_informasi\.venv\Scripts\pythonw.exe...
+[2026-09-05 00:22:57]   ✓ Selesai: download_data.pyw
+[2026-09-05 00:22:57]   ▶ Menjalankan arduino_radio.py dengan C:\Users\salma\OneDrive\Documents\Kuliah\Project Magang\web_informasi\.venv\Scripts\pythonw.exe...
+[2026-09-05 00:22:58]   ✓ Selesai: arduino_radio.py
+[2026-09-05 00:22:58] --- Selesai. Tidur 10 menit... ---
+
+[2026-09-05 00:32:58] --- Siklus Update Dimulai ---
+[2026-09-05 00:32:58]   ▶ Menjalankan download_data.pyw dengan C:\Users\salma\OneDrive\Documents\Kuliah\Project Magang\web_informasi\.venv\Scripts\pythonw.exe...
+[2026-09-05 00:33:18]   ✓ Selesai: download_data.pyw
+[2026-09-05 00:33:18]   ▶ Menjalankan arduino_radio.py dengan C:\Users\salma\OneDrive\Documents\Kuliah\Project Magang\web_informasi\.venv\Scripts\pythonw.exe...
+[2026-09-05 00:33:18]   ✓ Selesai: arduino_radio.py
+[2026-09-05 00:33:18] --- Selesai. Tidur 10 menit... ---
+
+[2026-09-05 00:43:18] --- Siklus Update Dimulai ---
+[2026-09-05 00:43:19]   ▶ Menjalankan download_data.pyw dengan C:\Users\salma\OneDrive\Documents\Kuliah\Project Magang\web_informasi\.venv\Scripts\pythonw.exe...
+[2026-09-05 00:43:39]   ✓ Selesai: download_data.pyw
+[2026-09-05 00:43:39]   ▶ Menjalankan arduino_radio.py dengan C:\Users\salma\OneDrive\Documents\Kuliah\Project Magang\web_informasi\.venv\Scripts\pythonw.exe...
+[2026-09-05 00:43:40]   ✓ Selesai: arduino_radio.py
+[2026-09-05 00:43:40] --- Selesai. Tidur 10 menit... ---
+
+[2026-09-05 00:53:40] --- Siklus Update Dimulai ---
+[2026-09-05 00:53:40]   ▶ Menjalankan download_data.pyw dengan C:\Users\salma\OneDrive\Documents\Kuliah\Project Magang\web_informasi\.venv\Scripts\pythonw.exe...
+[2026-09-05 00:53:59]   ✓ Selesai: download_data.pyw
+[2026-09-05 00:53:59]   ▶ Menjalankan arduino_radio.py dengan C:\Users\salma\OneDrive\Documents\Kuliah\Project Magang\web_informasi\.venv\Scripts\pythonw.exe...
+[2026-09-05 00:53:59]   ✓ Selesai: arduino_radio.py
+[2026-09-05 00:53:59] --- Selesai. Tidur 10 menit... ---
+
+[2026-09-05 01:03:59] --- Siklus Update Dimulai ---
+[2026-09-05 01:03:59]   ▶ Menjalankan download_data.pyw dengan C:\Users\salma\OneDrive\Documents\Kuliah\Project Magang\web_informasi\.venv\Scripts\pythonw.exe...
+[2026-09-05 01:04:19]   ✓ Selesai: download_data.pyw
+[2026-09-05 01:04:19]   ▶ Menjalankan arduino_radio.py dengan C:\Users\salma\OneDrive\Documents\Kuliah\Project Magang\web_informasi\.venv\Scripts\pythonw.exe...
+[2026-09-05 01:04:20]   ✓ Selesai: arduino_radio.py
+[2026-09-05 01:04:20] --- Selesai. Tidur 10 menit... ---
+
+[2026-09-08 09:03:12] [HTTP Server] Berjalan di http://localhost:8080
+[2026-09-08 09:03:13] [HTTP Server] Buka browser ke: http://localhost:8080
+[2026-09-08 09:03:13] ==================================================
+[2026-09-08 09:03:13] Auto-Update Scheduler dimulai
+[2026-09-08 09:03:13] Interval: setiap 10 menit
+[2026-09-08 09:03:13] Scripts: ['download_data.pyw', 'arduino_radio.py']
+[2026-09-08 09:03:13] ==================================================
+[2026-09-08 09:03:13] --- Siklus Update Dimulai ---
+[2026-09-08 09:03:13]   ▶ Menjalankan download_data.pyw dengan C:\Users\salma\OneDrive\Documents\Kuliah\Project Magang\web_informasi\.venv\Scripts\pythonw.exe...
+[2026-09-08 09:03:28]   ✓ Selesai: download_data.pyw
+[2026-09-08 09:03:28]   ▶ Menjalankan arduino_radio.py dengan C:\Users\salma\OneDrive\Documents\Kuliah\Project Magang\web_informasi\.venv\Scripts\pythonw.exe...
+[2026-09-08 09:03:28]   ✓ Selesai: arduino_radio.py
+[2026-09-08 09:03:28] --- Selesai. Tidur 10 menit... ---
+
+[2026-09-08 09:13:28] --- Siklus Update Dimulai ---
+[2026-09-08 09:13:28]   ▶ Menjalankan download_data.pyw dengan C:\Users\salma\OneDrive\Documents\Kuliah\Project Magang\web_informasi\.venv\Scripts\pythonw.exe...
+[2026-09-08 09:13:43]   ✓ Selesai: download_data.pyw
+[2026-09-08 09:13:43]   ▶ Menjalankan arduino_radio.py dengan C:\Users\salma\OneDrive\Documents\Kuliah\Project Magang\web_informasi\.venv\Scripts\pythonw.exe...
+[2026-09-08 09:13:43]   ✓ Selesai: arduino_radio.py
+[2026-09-08 09:13:44] --- Selesai. Tidur 10 menit... ---
+
+[2026-09-08 09:23:44] --- Siklus Update Dimulai ---
+[2026-09-08 09:23:44]   ▶ Menjalankan download_data.pyw dengan C:\Users\salma\OneDrive\Documents\Kuliah\Project Magang\web_informasi\.venv\Scripts\pythonw.exe...
+[2026-09-08 09:23:56]   ✓ Selesai: download_data.pyw
+[2026-09-08 09:23:56]   ▶ Menjalankan arduino_radio.py dengan C:\Users\salma\OneDrive\Documents\Kuliah\Project Magang\web_informasi\.venv\Scripts\pythonw.exe...
+[2026-09-08 09:23:56]   ✓ Selesai: arduino_radio.py
+[2026-09-08 09:23:56] --- Selesai. Tidur 10 menit... ---
+
+[2026-09-08 09:33:56] --- Siklus Update Dimulai ---
+[2026-09-08 09:33:56]   ▶ Menjalankan download_data.pyw dengan C:\Users\salma\OneDrive\Documents\Kuliah\Project Magang\web_informasi\.venv\Scripts\pythonw.exe...
+[2026-09-08 09:34:10]   ✓ Selesai: download_data.pyw
+[2026-09-08 09:34:10]   ▶ Menjalankan arduino_radio.py dengan C:\Users\salma\OneDrive\Documents\Kuliah\Project Magang\web_informasi\.venv\Scripts\pythonw.exe...
+[2026-09-08 09:34:11]   ✓ Selesai: arduino_radio.py
+[2026-09-08 09:34:11] --- Selesai. Tidur 10 menit... ---
+
+[2026-09-08 09:44:11] --- Siklus Update Dimulai ---
+[2026-09-08 09:44:11]   ▶ Menjalankan download_data.pyw dengan C:\Users\salma\OneDrive\Documents\Kuliah\Project Magang\web_informasi\.venv\Scripts\pythonw.exe...
+[2026-09-08 09:44:24]   ✓ Selesai: download_data.pyw
+[2026-09-08 09:44:24]   ▶ Menjalankan arduino_radio.py dengan C:\Users\salma\OneDrive\Documents\Kuliah\Project Magang\web_informasi\.venv\Scripts\pythonw.exe...
+[2026-09-08 09:44:24]   ✓ Selesai: arduino_radio.py
+[2026-09-08 09:44:24] --- Selesai. Tidur 10 menit... ---
+
+[2026-09-08 09:54:24] --- Siklus Update Dimulai ---
+[2026-09-08 09:54:24]   ▶ Menjalankan download_data.pyw dengan C:\Users\salma\OneDrive\Documents\Kuliah\Project Magang\web_informasi\.venv\Scripts\pythonw.exe...
+[2026-09-08 09:54:38]   ✓ Selesai: download_data.pyw
+[2026-09-08 09:54:38]   ▶ Menjalankan arduino_radio.py dengan C:\Users\salma\OneDrive\Documents\Kuliah\Project Magang\web_informasi\.venv\Scripts\pythonw.exe...
+[2026-09-08 09:54:38]   ✓ Selesai: arduino_radio.py
+[2026-09-08 09:54:38] --- Selesai. Tidur 10 menit... ---
+
+[2026-09-08 10:04:38] --- Siklus Update Dimulai ---
+[2026-09-08 10:04:38]   ▶ Menjalankan download_data.pyw dengan C:\Users\salma\OneDrive\Documents\Kuliah\Project Magang\web_informasi\.venv\Scripts\pythonw.exe...
+[2026-09-08 10:04:48]   ✓ Selesai: download_data.pyw
+[2026-09-08 10:04:48]   ▶ Menjalankan arduino_radio.py dengan C:\Users\salma\OneDrive\Documents\Kuliah\Project Magang\web_informasi\.venv\Scripts\pythonw.exe...
+[2026-09-08 10:04:49]   ✓ Selesai: arduino_radio.py
+[2026-09-08 10:04:49] --- Selesai. Tidur 10 menit... ---
+
+[2026-09-08 11:05:06] --- Siklus Update Dimulai ---
+[2026-09-08 11:05:06]   ▶ Menjalankan download_data.pyw dengan C:\Users\salma\OneDrive\Documents\Kuliah\Project Magang\web_informasi\.venv\Scripts\pythonw.exe...
+[2026-09-08 11:05:29]   ✓ Selesai: download_data.pyw
+[2026-09-08 11:05:29]   ▶ Menjalankan arduino_radio.py dengan C:\Users\salma\OneDrive\Documents\Kuliah\Project Magang\web_informasi\.venv\Scripts\pythonw.exe...
+[2026-09-08 11:05:29]   ✓ Selesai: arduino_radio.py
+[2026-09-08 11:05:29] --- Selesai. Tidur 10 menit... ---
+
+[2026-09-08 11:15:29] --- Siklus Update Dimulai ---
+[2026-09-08 11:15:29]   ▶ Menjalankan download_data.pyw dengan C:\Users\salma\OneDrive\Documents\Kuliah\Project Magang\web_informasi\.venv\Scripts\pythonw.exe...
+[2026-09-08 11:15:51]   ✓ Selesai: download_data.pyw
+[2026-09-08 11:15:51]   ▶ Menjalankan arduino_radio.py dengan C:\Users\salma\OneDrive\Documents\Kuliah\Project Magang\web_informasi\.venv\Scripts\pythonw.exe...
+[2026-09-08 11:15:51]   ✓ Selesai: arduino_radio.py
+[2026-09-08 11:15:51] --- Selesai. Tidur 10 menit... ---
+
+[2026-09-08 11:25:51] --- Siklus Update Dimulai ---
+[2026-09-08 11:25:51]   ▶ Menjalankan download_data.pyw dengan C:\Users\salma\OneDrive\Documents\Kuliah\Project Magang\web_informasi\.venv\Scripts\pythonw.exe...
+[2026-09-08 11:26:05]   ✓ Selesai: download_data.pyw
+[2026-09-08 11:26:05]   ▶ Menjalankan arduino_radio.py dengan C:\Users\salma\OneDrive\Documents\Kuliah\Project Magang\web_informasi\.venv\Scripts\pythonw.exe...
+[2026-09-08 11:26:05]   ✓ Selesai: arduino_radio.py
+[2026-09-08 11:26:05] --- Selesai. Tidur 10 menit... ---
+
+[2026-09-08 11:36:05] --- Siklus Update Dimulai ---
+[2026-09-08 11:36:05]   ▶ Menjalankan download_data.pyw dengan C:\Users\salma\OneDrive\Documents\Kuliah\Project Magang\web_informasi\.venv\Scripts\pythonw.exe...
+[2026-09-08 11:36:23]   ✓ Selesai: download_data.pyw
+[2026-09-08 11:36:23]   ▶ Menjalankan arduino_radio.py dengan C:\Users\salma\OneDrive\Documents\Kuliah\Project Magang\web_informasi\.venv\Scripts\pythonw.exe...
+[2026-09-08 11:36:23]   ✓ Selesai: arduino_radio.py
+[2026-09-08 11:36:23] --- Selesai. Tidur 10 menit... ---
+
+[2026-09-08 11:46:23] --- Siklus Update Dimulai ---
+[2026-09-08 11:46:23]   ▶ Menjalankan download_data.pyw dengan C:\Users\salma\OneDrive\Documents\Kuliah\Project Magang\web_informasi\.venv\Scripts\pythonw.exe...
+[2026-09-08 11:46:40]   ✓ Selesai: download_data.pyw
+[2026-09-08 11:46:40]   ▶ Menjalankan arduino_radio.py dengan C:\Users\salma\OneDrive\Documents\Kuliah\Project Magang\web_informasi\.venv\Scripts\pythonw.exe...
+[2026-09-08 11:46:40]   ✓ Selesai: arduino_radio.py
+[2026-09-08 11:46:40] --- Selesai. Tidur 10 menit... ---
+
+[2026-09-08 12:08:53] --- Siklus Update Dimulai ---
+[2026-09-08 12:08:53]   ▶ Menjalankan download_data.pyw dengan C:\Users\salma\OneDrive\Documents\Kuliah\Project Magang\web_informasi\.venv\Scripts\pythonw.exe...
+[2026-09-08 12:09:16]   ✓ Selesai: download_data.pyw
+[2026-09-08 12:09:16]   ▶ Menjalankan arduino_radio.py dengan C:\Users\salma\OneDrive\Documents\Kuliah\Project Magang\web_informasi\.venv\Scripts\pythonw.exe...
+[2026-09-08 12:09:16]   ✓ Selesai: arduino_radio.py
+[2026-09-08 12:09:16] --- Selesai. Tidur 10 menit... ---
+
+[2026-09-08 14:28:08] [HTTP Server] Berjalan di http://localhost:8080
+[2026-09-08 14:28:08] [HTTP Server] Buka browser ke: http://localhost:8080
+[2026-09-08 14:28:08] ==================================================
+[2026-09-08 14:28:08] Auto-Update Scheduler dimulai
+[2026-09-08 14:28:08] Interval: setiap 10 menit
+[2026-09-08 14:28:08] Scripts: ['download_data.pyw', 'arduino_radio.py']
+[2026-09-08 14:28:08] ==================================================
+[2026-09-08 14:28:08] --- Siklus Update Dimulai ---
+[2026-09-08 14:28:08]   ▶ Menjalankan download_data.pyw dengan C:\Users\salma\OneDrive\Documents\Kuliah\Project Magang\web_informasi\.venv\Scripts\pythonw.exe...
+[2026-09-08 14:28:40]   ✓ Selesai: download_data.pyw
+[2026-09-08 14:28:40]   ▶ Menjalankan arduino_radio.py dengan C:\Users\salma\OneDrive\Documents\Kuliah\Project Magang\web_informasi\.venv\Scripts\pythonw.exe...
+[2026-09-08 14:28:41]   ✓ Selesai: arduino_radio.py
+[2026-09-08 14:28:41] --- Selesai. Tidur 10 menit... ---
+
+[2026-09-08 14:38:41] --- Siklus Update Dimulai ---
+[2026-09-08 14:38:41]   ▶ Menjalankan download_data.pyw dengan C:\Users\salma\OneDrive\Documents\Kuliah\Project Magang\web_informasi\.venv\Scripts\pythonw.exe...
+[2026-09-08 14:39:10]   ✓ Selesai: download_data.pyw
+[2026-09-08 14:39:10]   ▶ Menjalankan arduino_radio.py dengan C:\Users\salma\OneDrive\Documents\Kuliah\Project Magang\web_informasi\.venv\Scripts\pythonw.exe...
+[2026-09-08 14:39:10]   ✓ Selesai: arduino_radio.py
+[2026-09-08 14:39:10] --- Selesai. Tidur 10 menit... ---
+
+[2026-09-08 14:49:10] --- Siklus Update Dimulai ---
+[2026-09-08 14:49:10]   ▶ Menjalankan download_data.pyw dengan C:\Users\salma\OneDrive\Documents\Kuliah\Project Magang\web_informasi\.venv\Scripts\pythonw.exe...
+[2026-09-08 14:49:41]   ✓ Selesai: download_data.pyw
+[2026-09-08 14:49:41]   ▶ Menjalankan arduino_radio.py dengan C:\Users\salma\OneDrive\Documents\Kuliah\Project Magang\web_informasi\.venv\Scripts\pythonw.exe...
+[2026-09-08 14:49:41]   ✓ Selesai: arduino_radio.py
+[2026-09-08 14:49:41] --- Selesai. Tidur 10 menit... ---
+
+[2026-09-08 14:59:41] --- Siklus Update Dimulai ---
+[2026-09-08 14:59:41]   ▶ Menjalankan download_data.pyw dengan C:\Users\salma\OneDrive\Documents\Kuliah\Project Magang\web_informasi\.venv\Scripts\pythonw.exe...
+[2026-09-08 15:00:20]   ✓ Selesai: download_data.pyw
+[2026-09-08 15:00:20]   ▶ Menjalankan arduino_radio.py dengan C:\Users\salma\OneDrive\Documents\Kuliah\Project Magang\web_informasi\.venv\Scripts\pythonw.exe...
+[2026-09-08 15:00:21]   ✓ Selesai: arduino_radio.py
+[2026-09-08 15:00:21] --- Selesai. Tidur 10 menit... ---
+
+[2026-09-08 15:10:21] --- Siklus Update Dimulai ---
+[2026-09-08 15:10:21]   ▶ Menjalankan download_data.pyw dengan C:\Users\salma\OneDrive\Documents\Kuliah\Project Magang\web_informasi\.venv\Scripts\pythonw.exe...
+[2026-09-08 15:10:50]   ✓ Selesai: download_data.pyw
+[2026-09-08 15:10:50]   ▶ Menjalankan arduino_radio.py dengan C:\Users\salma\OneDrive\Documents\Kuliah\Project Magang\web_informasi\.venv\Scripts\pythonw.exe...
+[2026-09-08 15:10:51]   ✓ Selesai: arduino_radio.py
+[2026-09-08 15:10:51] --- Selesai. Tidur 10 menit... ---
+
+[2026-09-08 15:20:51] --- Siklus Update Dimulai ---
+[2026-09-08 15:20:51]   ▶ Menjalankan download_data.pyw dengan C:\Users\salma\OneDrive\Documents\Kuliah\Project Magang\web_informasi\.venv\Scripts\pythonw.exe...
+[2026-09-08 15:21:26]   ✓ Selesai: download_data.pyw
+[2026-09-08 15:21:26]   ▶ Menjalankan arduino_radio.py dengan C:\Users\salma\OneDrive\Documents\Kuliah\Project Magang\web_informasi\.venv\Scripts\pythonw.exe...
+[2026-09-08 15:21:27]   ✓ Selesai: arduino_radio.py
+[2026-09-08 15:21:27] --- Selesai. Tidur 10 menit... ---
+
+[2026-09-08 15:31:27] --- Siklus Update Dimulai ---
+[2026-09-08 15:31:27]   ▶ Menjalankan download_data.pyw dengan C:\Users\salma\OneDrive\Documents\Kuliah\Project Magang\web_informasi\.venv\Scripts\pythonw.exe...
+[2026-09-08 15:31:35]   ✓ Selesai: download_data.pyw
+[2026-09-08 15:31:35]   ▶ Menjalankan arduino_radio.py dengan C:\Users\salma\OneDrive\Documents\Kuliah\Project Magang\web_informasi\.venv\Scripts\pythonw.exe...
+[2026-09-08 15:31:37]   ✓ Selesai: arduino_radio.py
+[2026-09-08 15:31:37] --- Selesai. Tidur 10 menit... ---
+
+[2026-09-08 15:41:37] --- Siklus Update Dimulai ---
+[2026-09-08 15:41:37]   ▶ Menjalankan download_data.pyw dengan C:\Users\salma\OneDrive\Documents\Kuliah\Project Magang\web_informasi\.venv\Scripts\pythonw.exe...
+[2026-09-08 15:42:08]   ✓ Selesai: download_data.pyw
+[2026-09-08 15:42:08]   ▶ Menjalankan arduino_radio.py dengan C:\Users\salma\OneDrive\Documents\Kuliah\Project Magang\web_informasi\.venv\Scripts\pythonw.exe...
+[2026-09-08 15:42:08]   ✓ Selesai: arduino_radio.py
+[2026-09-08 15:42:08] --- Selesai. Tidur 10 menit... ---
+
+[2026-09-08 16:02:38] [HTTP Server] Berjalan di http://localhost:8080
+[2026-09-08 16:02:38] [HTTP Server] Buka browser ke: http://localhost:8080
+[2026-09-08 16:02:39] ==================================================
+[2026-09-08 16:02:39] Auto-Update Scheduler dimulai
+[2026-09-08 16:02:39] Interval: setiap 10 menit
+[2026-09-08 16:02:39] Scripts: ['download_data.pyw', 'arduino_radio.py']
+[2026-09-08 16:02:39] ==================================================
+[2026-09-08 16:02:39] --- Siklus Update Dimulai ---
+[2026-09-08 16:02:39]   ▶ Menjalankan download_data.pyw dengan C:\Users\salma\OneDrive\Documents\Kuliah\Project Magang\web_informasi\.venv\Scripts\pythonw.exe...
+[2026-09-08 16:03:09]   ✓ Selesai: download_data.pyw
+[2026-09-08 16:03:09]   ▶ Menjalankan arduino_radio.py dengan C:\Users\salma\OneDrive\Documents\Kuliah\Project Magang\web_informasi\.venv\Scripts\pythonw.exe...
+[2026-09-08 16:03:09]   ✓ Selesai: arduino_radio.py
+[2026-09-08 16:03:09] --- Selesai. Tidur 10 menit... ---
+
+[2026-09-08 16:13:09] --- Siklus Update Dimulai ---
+[2026-09-08 16:13:09]   ▶ Menjalankan download_data.pyw dengan C:\Users\salma\OneDrive\Documents\Kuliah\Project Magang\web_informasi\.venv\Scripts\pythonw.exe...
+[2026-09-08 16:13:43]   ✓ Selesai: download_data.pyw
+[2026-09-08 16:13:43]   ▶ Menjalankan arduino_radio.py dengan C:\Users\salma\OneDrive\Documents\Kuliah\Project Magang\web_informasi\.venv\Scripts\pythonw.exe...
+[2026-09-08 16:13:43]   ✓ Selesai: arduino_radio.py
+[2026-09-08 16:13:43] --- Selesai. Tidur 10 menit... ---
+
+[2026-09-08 16:23:43] --- Siklus Update Dimulai ---
+[2026-09-08 16:23:43]   ▶ Menjalankan download_data.pyw dengan C:\Users\salma\OneDrive\Documents\Kuliah\Project Magang\web_informasi\.venv\Scripts\pythonw.exe...
+[2026-09-08 16:24:05]   ✓ Selesai: download_data.pyw
+[2026-09-08 16:24:05]   ▶ Menjalankan arduino_radio.py dengan C:\Users\salma\OneDrive\Documents\Kuliah\Project Magang\web_informasi\.venv\Scripts\pythonw.exe...
+[2026-09-08 16:24:06]   ✓ Selesai: arduino_radio.py
+[2026-09-08 16:24:06] --- Selesai. Tidur 10 menit... ---
+
+[2026-09-08 16:34:06] --- Siklus Update Dimulai ---
+[2026-09-08 16:34:06]   ▶ Menjalankan download_data.pyw dengan C:\Users\salma\OneDrive\Documents\Kuliah\Project Magang\web_informasi\.venv\Scripts\pythonw.exe...
+[2026-09-08 16:34:30]   ✓ Selesai: download_data.pyw
+[2026-09-08 16:34:30]   ▶ Menjalankan arduino_radio.py dengan C:\Users\salma\OneDrive\Documents\Kuliah\Project Magang\web_informasi\.venv\Scripts\pythonw.exe...
+[2026-09-08 16:34:30]   ✓ Selesai: arduino_radio.py
+[2026-09-08 16:34:30] --- Selesai. Tidur 10 menit... ---
+
+[2026-09-08 16:44:30] --- Siklus Update Dimulai ---
+[2026-09-08 16:44:30]   ▶ Menjalankan download_data.pyw dengan C:\Users\salma\OneDrive\Documents\Kuliah\Project Magang\web_informasi\.venv\Scripts\pythonw.exe...
+[2026-09-08 16:44:53]   ✓ Selesai: download_data.pyw
+[2026-09-08 16:44:53]   ▶ Menjalankan arduino_radio.py dengan C:\Users\salma\OneDrive\Documents\Kuliah\Project Magang\web_informasi\.venv\Scripts\pythonw.exe...
+[2026-09-08 16:44:53]   ✓ Selesai: arduino_radio.py
+[2026-09-08 16:44:53] --- Selesai. Tidur 10 menit... ---
+
+[2026-09-08 16:54:53] --- Siklus Update Dimulai ---
+[2026-09-08 16:54:53]   ▶ Menjalankan download_data.pyw dengan C:\Users\salma\OneDrive\Documents\Kuliah\Project Magang\web_informasi\.venv\Scripts\pythonw.exe...
+[2026-09-08 16:55:12]   ✓ Selesai: download_data.pyw
+[2026-09-08 16:55:12]   ▶ Menjalankan arduino_radio.py dengan C:\Users\salma\OneDrive\Documents\Kuliah\Project Magang\web_informasi\.venv\Scripts\pythonw.exe...
+[2026-09-08 16:55:13]   ✓ Selesai: arduino_radio.py
+[2026-09-08 16:55:13] --- Selesai. Tidur 10 menit... ---
+
+[2026-09-08 17:05:13] --- Siklus Update Dimulai ---
+[2026-09-08 17:05:13]   ▶ Menjalankan download_data.pyw dengan C:\Users\salma\OneDrive\Documents\Kuliah\Project Magang\web_informasi\.venv\Scripts\pythonw.exe...
+[2026-09-08 17:05:35]   ✓ Selesai: download_data.pyw
+[2026-09-08 17:05:35]   ▶ Menjalankan arduino_radio.py dengan C:\Users\salma\OneDrive\Documents\Kuliah\Project Magang\web_informasi\.venv\Scripts\pythonw.exe...
+[2026-09-08 17:05:35]   ✓ Selesai: arduino_radio.py
+[2026-09-08 17:05:35] --- Selesai. Tidur 10 menit... ---
+
+[2026-09-08 17:15:35] --- Siklus Update Dimulai ---
+[2026-09-08 17:15:35]   ▶ Menjalankan download_data.pyw dengan C:\Users\salma\OneDrive\Documents\Kuliah\Project Magang\web_informasi\.venv\Scripts\pythonw.exe...
+[2026-09-08 17:15:58]   ✓ Selesai: download_data.pyw
+[2026-09-08 17:15:58]   ▶ Menjalankan arduino_radio.py dengan C:\Users\salma\OneDrive\Documents\Kuliah\Project Magang\web_informasi\.venv\Scripts\pythonw.exe...
+[2026-09-08 17:15:58]   ✓ Selesai: arduino_radio.py
+[2026-09-08 17:15:58] --- Selesai. Tidur 10 menit... ---
+
+[2026-09-08 17:25:58] --- Siklus Update Dimulai ---
+[2026-09-08 17:25:58]   ▶ Menjalankan download_data.pyw dengan C:\Users\salma\OneDrive\Documents\Kuliah\Project Magang\web_informasi\.venv\Scripts\pythonw.exe...
+[2026-09-08 17:26:21]   ✓ Selesai: download_data.pyw
+[2026-09-08 17:26:21]   ▶ Menjalankan arduino_radio.py dengan C:\Users\salma\OneDrive\Documents\Kuliah\Project Magang\web_informasi\.venv\Scripts\pythonw.exe...
+[2026-09-08 17:26:22]   ✓ Selesai: arduino_radio.py
+[2026-09-08 17:26:22] --- Selesai. Tidur 10 menit... ---
+
+[2026-09-08 17:36:22] --- Siklus Update Dimulai ---
+[2026-09-08 17:36:22]   ▶ Menjalankan download_data.pyw dengan C:\Users\salma\OneDrive\Documents\Kuliah\Project Magang\web_informasi\.venv\Scripts\pythonw.exe...
+[2026-09-08 17:36:42]   ✓ Selesai: download_data.pyw
+[2026-09-08 17:36:42]   ▶ Menjalankan arduino_radio.py dengan C:\Users\salma\OneDrive\Documents\Kuliah\Project Magang\web_informasi\.venv\Scripts\pythonw.exe...
+[2026-09-08 17:36:42]   ✓ Selesai: arduino_radio.py
+[2026-09-08 17:36:42] --- Selesai. Tidur 10 menit... ---
+
+[2026-09-08 17:46:42] --- Siklus Update Dimulai ---
+[2026-09-08 17:46:42]   ▶ Menjalankan download_data.pyw dengan C:\Users\salma\OneDrive\Documents\Kuliah\Project Magang\web_informasi\.venv\Scripts\pythonw.exe...
+[2026-09-08 17:47:05]   ✓ Selesai: download_data.pyw
+[2026-09-08 17:47:05]   ▶ Menjalankan arduino_radio.py dengan C:\Users\salma\OneDrive\Documents\Kuliah\Project Magang\web_informasi\.venv\Scripts\pythonw.exe...
+[2026-09-08 17:47:05]   ✓ Selesai: arduino_radio.py
+[2026-09-08 17:47:05] --- Selesai. Tidur 10 menit... ---
+
+[2026-09-08 17:57:05] --- Siklus Update Dimulai ---
+[2026-09-08 17:57:05]   ▶ Menjalankan download_data.pyw dengan C:\Users\salma\OneDrive\Documents\Kuliah\Project Magang\web_informasi\.venv\Scripts\pythonw.exe...
+[2026-09-08 17:57:27]   ✓ Selesai: download_data.pyw
+[2026-09-08 17:57:28]   ▶ Menjalankan arduino_radio.py dengan C:\Users\salma\OneDrive\Documents\Kuliah\Project Magang\web_informasi\.venv\Scripts\pythonw.exe...
+[2026-09-08 17:57:28]   ✓ Selesai: arduino_radio.py
+[2026-09-08 17:57:28] --- Selesai. Tidur 10 menit... ---
+
+[2026-09-08 18:07:28] --- Siklus Update Dimulai ---
+[2026-09-08 18:07:28]   ▶ Menjalankan download_data.pyw dengan C:\Users\salma\OneDrive\Documents\Kuliah\Project Magang\web_informasi\.venv\Scripts\pythonw.exe...
+[2026-09-08 18:07:50]   ✓ Selesai: download_data.pyw
+[2026-09-08 18:07:50]   ▶ Menjalankan arduino_radio.py dengan C:\Users\salma\OneDrive\Documents\Kuliah\Project Magang\web_informasi\.venv\Scripts\pythonw.exe...
+[2026-09-08 18:07:50]   ✓ Selesai: arduino_radio.py
+[2026-09-08 18:07:50] --- Selesai. Tidur 10 menit... ---
+
+[2026-09-08 18:17:50] --- Siklus Update Dimulai ---
+[2026-09-08 18:17:50]   ▶ Menjalankan download_data.pyw dengan C:\Users\salma\OneDrive\Documents\Kuliah\Project Magang\web_informasi\.venv\Scripts\pythonw.exe...
+[2026-09-08 18:18:12]   ✓ Selesai: download_data.pyw
+[2026-09-08 18:18:12]   ▶ Menjalankan arduino_radio.py dengan C:\Users\salma\OneDrive\Documents\Kuliah\Project Magang\web_informasi\.venv\Scripts\pythonw.exe...
+[2026-09-08 18:18:13]   ✓ Selesai: arduino_radio.py
+[2026-09-08 18:18:13] --- Selesai. Tidur 10 menit... ---
+
+[2026-09-09 16:39:10] [HTTP Server] Berjalan di http://localhost:8080
+[2026-09-09 16:39:10] [HTTP Server] Buka browser ke: http://localhost:8080
+[2026-09-09 16:39:11] ==================================================
+[2026-09-09 16:39:11] Auto-Update Scheduler dimulai
+[2026-09-09 16:39:11] Interval: setiap 10 menit
+[2026-09-09 16:39:11] Scripts: ['download_data.pyw', 'arduino_radio.py']
+[2026-09-09 16:39:11] ==================================================
+[2026-09-09 16:39:11] --- Siklus Update Dimulai ---
+[2026-09-09 16:39:11]   ▶ Menjalankan download_data.pyw dengan C:\Users\salma\OneDrive\Documents\Kuliah\Project Magang\web_informasi\.venv\Scripts\pythonw.exe...
+[2026-09-09 16:39:41]   ✓ Selesai: download_data.pyw
+[2026-09-09 16:39:41]   ▶ Menjalankan arduino_radio.py dengan C:\Users\salma\OneDrive\Documents\Kuliah\Project Magang\web_informasi\.venv\Scripts\pythonw.exe...
+[2026-09-09 16:39:42]   ✓ Selesai: arduino_radio.py
+[2026-09-09 16:39:42] --- Selesai. Tidur 10 menit... ---
+
+[2026-09-09 16:49:42] --- Siklus Update Dimulai ---
+[2026-09-09 16:49:42]   ▶ Menjalankan download_data.pyw dengan C:\Users\salma\OneDrive\Documents\Kuliah\Project Magang\web_informasi\.venv\Scripts\pythonw.exe...
+[2026-09-09 16:50:06]   ✓ Selesai: download_data.pyw
+[2026-09-09 16:50:06]   ▶ Menjalankan arduino_radio.py dengan C:\Users\salma\OneDrive\Documents\Kuliah\Project Magang\web_informasi\.venv\Scripts\pythonw.exe...
+[2026-09-09 16:50:06]   ✓ Selesai: arduino_radio.py
+[2026-09-09 16:50:06] --- Selesai. Tidur 10 menit... ---
+
+[2026-09-09 17:00:06] --- Siklus Update Dimulai ---
+[2026-09-09 17:00:06]   ▶ Menjalankan download_data.pyw dengan C:\Users\salma\OneDrive\Documents\Kuliah\Project Magang\web_informasi\.venv\Scripts\pythonw.exe...
+[2026-09-09 17:00:26]   ✓ Selesai: download_data.pyw
+[2026-09-09 17:00:26]   ▶ Menjalankan arduino_radio.py dengan C:\Users\salma\OneDrive\Documents\Kuliah\Project Magang\web_informasi\.venv\Scripts\pythonw.exe...
+[2026-09-09 17:00:26]   ✓ Selesai: arduino_radio.py
+[2026-09-09 17:00:26] --- Selesai. Tidur 10 menit... ---
+
